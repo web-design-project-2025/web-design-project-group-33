@@ -9,12 +9,6 @@
   --white: #ffffff;
 }
 
-* {
-  font-family: var(--Grotesk);
-  font-weight: 500;
-  font-style: normal;
-}
-
 body {
   background-color: var(--secondary-grey);
   margin: 0px;
@@ -38,17 +32,18 @@ h3 {
   font-style: normal;
 }
 
-p {
+p,
+li {
   font-family: var(--Grotesk);
   font-weight: 500;
   font-style: normal;
 }
 
-/* .Placceholder {
+.placceholder {
   font-family: var(--Grotesk);
   font-weight: 400;
   font-style: normal;
-} */
+}
 
 /* Footer styling */
 footer {
@@ -75,14 +70,15 @@ footer {
 
 .footer-container-links {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
 }
 .footer-container-logos {
   display: flex;
   flex-direction: column;
   width: 17rem;
-  margin-right: 5rem;
+  margin-right: 2rem;
+  grid-column: span 2;
 }
 
 #footer-movie-roast-logo {
@@ -93,15 +89,26 @@ footer {
   width: 9rem;
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 750px) {
   .footer-container-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: auto auto;
   }
   .footer-container-logos {
     flex-direction: column;
     grid-column: 1 / 4;
     grid-row: 1;
+    margin-right: 0;
+  }
+  .footer-container-links > :nth-child(2) {
+    display: none;
+  }
+  .footer-container-links > :nth-child(3) {
+    padding-right: 2.5rem;
+  }
+  footer {
+    padding: 2rem 0rem 2rem 2rem;
   }
 }
