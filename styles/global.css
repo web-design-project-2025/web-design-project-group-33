@@ -1,26 +1,39 @@
 :root {
   --Grotesk: neue-haas-grotesk-display, sans-serif;
+  --primary-grey: #1c1819;
+  --secondary-grey: #1c1c1c;
+  --tertiary-grey: #262626;
+  --red: #a12724;
+  --eggshell: #fff9e3;
+  --black: #000000;
+  --white: #ffffff;
 }
 
-.H1 {
+body {
+  background-color: var(--secondary-grey);
+  margin: 0px;
+}
+
+h1 {
   font-family: var(--Grotesk);
   font-weight: 900;
   font-style: normal;
 }
 
-.H2 {
+h2 {
   font-family: var(--Grotesk);
   font-weight: 700;
   font-style: normal;
 }
 
-.H3 {
+h3 {
   font-family: var(--Grotesk);
   font-weight: 600;
   font-style: normal;
 }
 
-.Paragraph {
+p,
+li {
   font-family: var(--Grotesk);
   font-weight: 500;
   font-style: normal;
@@ -32,6 +45,7 @@ input {
   font-style: normal;
 }
 
+/*NAVBAR*/
 .navbar {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -73,10 +87,6 @@ input {
   color: #a39fa2;
 }
 
-body {
-  margin: 0;
-}
-
 #profile-pic-container a {
   display: flex;
   align-items: center;
@@ -94,4 +104,71 @@ body {
   height: 1.6rem;
   padding-left: 1rem;
   outline: none;
+
+/* Footer styling */
+footer {
+  background-color: var(--primary-grey);
+  color: var(--eggshell);
+  padding: 2rem 2rem 3rem 2rem;
+}
+
+.footer-ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-ul a {
+  color: var(--eggshell);
+  text-decoration: none;
+}
+
+.footer-ul li {
+  margin-bottom: 1.2rem;
+}
+
+.footer-container-links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+}
+.footer-container-logos {
+  display: flex;
+  flex-direction: column;
+  width: 17rem;
+  margin-right: 2rem;
+  grid-column: span 2;
+}
+
+#footer-movie-roast-logo {
+  width: 15rem;
+}
+
+#footer-movie-db-logo {
+  width: 9rem;
+}
+
+@media screen and (max-width: 860px) {
+  .footer-container-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+  }
+  .footer-container-logos {
+    flex-direction: column;
+    grid-column: 1 / 4;
+    grid-row: 1;
+    margin-right: 0;
+  }
+  .footer-container-links > :nth-child(2) {
+    display: none;
+  }
+  .footer-container-links > :nth-child(3) {
+    padding-right: 2.5rem;
+  }
+  footer {
+    padding: 2rem 0rem 2rem 2rem;
+  }
 }
