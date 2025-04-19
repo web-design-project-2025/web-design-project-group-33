@@ -175,11 +175,11 @@ footer {
 }
 
 /*About*/
-.wrapper {
+.about-text {
   flex-direction: column;
 }
 
-.wrapper {
+.about-text {
   color: var(--eggshell);
   padding: 1.25rem;
   text-align: center;
