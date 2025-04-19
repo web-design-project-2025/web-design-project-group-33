@@ -173,3 +173,16 @@ footer {
     padding: 2rem 0rem 2rem 2rem;
   }
 }
+
+/*About*/
+.wrapper {
+  flex-direction: column;
+}
+
+.wrapper {
+  color: var(--eggshell);
+  padding: 1.25rem;
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 30rem;
+}
