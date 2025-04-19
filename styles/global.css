@@ -11,28 +11,25 @@
 
 body {
   background-color: var(--secondary-grey);
-  margin: 0px;
+  margin: 0;
 }
 
 h1 {
   font-family: var(--Grotesk);
   font-weight: 900;
   font-style: normal;
-  color: var(--white);
 }
 
 h2 {
   font-family: var(--Grotesk);
   font-weight: 700;
   font-style: normal;
-  color: var(--white);
 }
 
 h3 {
   font-family: var(--Grotesk);
   font-weight: 600;
   font-style: normal;
-  color: var(--white);
 }
 
 p,
@@ -40,7 +37,6 @@ li {
   font-family: var(--Grotesk);
   font-weight: 500;
   font-style: normal;
-  color: var(--white);
 }
 
 input {
@@ -199,20 +195,25 @@ footer {
 /* Homepage */
 .homepage-cover-photo {
   width: 100%;
+  height: 45rem;
+  object-fit: cover;
 }
 
 .overlay-text-cover {
+  position: absolute;
+  width: 100%;
+  top: 450px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   color: var(--eggshell);
   font-size: 2.5rem;
-
-  /* not finished here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 }
 
 .overlay-text-cover > :nth-child(1) {
-  width: 24rem;
+  width: 25rem;
   grid-row: 1 / 3;
   grid-column: 1 / 2;
   justify-self: end;
@@ -230,7 +231,8 @@ footer {
 }
 
 .homepage-buttom-section {
-  margin: 0 0 10% 10%;
+  margin: 0 0 6rem 10%;
+  color: var(--white);
 }
 
 .homepage-buttom-section h3 {
