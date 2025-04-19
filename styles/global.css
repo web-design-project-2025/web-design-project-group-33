@@ -89,7 +89,7 @@ footer {
   width: 9rem;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 860px) {
   .footer-container-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
