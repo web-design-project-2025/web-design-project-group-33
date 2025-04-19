@@ -4,7 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.typekit.net/kxb7wrw.css" />
+    <link rel="stylesheet" href="styles/global.css" />
   </head>
   <script src="scripts/api.js"></script>
-  <body></body>
+  <script src="scripts/testing.js"></script>
+
+  <body>
+    <form class="review-textbox" action="/submit-review">
+      <input type="text" placeholder="Write your review here..." />
+      <div class="rating">
+        <label for="Rating">Rating:</label>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+      </div>
+      <button class="button" type="submit">Post</button>
+    </form>
+  </body>
 </html>
