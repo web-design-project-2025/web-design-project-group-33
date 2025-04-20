@@ -186,3 +186,72 @@ footer {
   margin-top: 10rem;
   margin-bottom: 30rem;
 }
+
+/* Profile Page */
+
+.profile-page {
+  display: flex;
+  justify-self: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  align-items: center;
+  column-gap: 10%;
+  width: 50%;
+}
+
+#profile-image {
+  border-radius: 50%;
+  max-width: 40%;
+}
+
+#profile-detail {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  justify-items: start;
+  color: white;
+  gap: 2vh;
+}
+
+#profile-stats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: small;
+  gap: 5vw;
+}
+
+.profile-columns {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5vh;
+}
+
+.profile-text p, h3 {
+  margin: 0;
+}
+
+.profile-rows button {
+  height: 50%;
+}
+
+.button-red {
+  background-color: #a12724;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  border-radius: 100px;
+  max-width: 480px;
+  min-height: 35px;
+  min-width: 100px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.button-red:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
