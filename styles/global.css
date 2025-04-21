@@ -92,7 +92,8 @@ class="button button--grey"   for grey
   border-radius: 50%;
 }
 
-.navbar a {
+.navbar a,
+p {
   text-decoration: none;
   color: var(--eggshell);
   margin: 0rem 1.6rem 0rem 1.6rem;
@@ -105,11 +106,27 @@ class="button button--grey"   for grey
   grid-column: 2 / 5;
 }
 
-#profile-pic-container a {
+.navbar p:hover,
+.navbar a:hover {
+  color: #a39fa2;
+}
+
+#profile-pic-container {
   display: flex;
   align-items: center;
-  justify-content: end;
-  gap: 1.5rem;
+  justify-self: end;
+}
+
+#profile-text {
+  margin: 0;
+}
+
+#profile-icon {
+  font-size: 0;
+}
+
+#profile-icon img:hover {
+  scale: 1.1;
 }
 
 #searchbar {
