@@ -70,7 +70,8 @@ input {
   border-radius: 50%;
 }
 
-.navbar a {
+.navbar a,
+p {
   text-decoration: none;
   color: #fff9e3;
   margin: 0rem 1.6rem 0rem 1.6rem;
@@ -83,15 +84,27 @@ input {
   grid-column: 2 / 5;
 }
 
+.navbar p:hover,
 .navbar a:hover {
   color: #a39fa2;
 }
 
-#profile-pic-container a {
+#profile-pic-container {
   display: flex;
   align-items: center;
-  justify-content: end;
-  gap: 1.5rem;
+  justify-self: end;
+}
+
+#profile-text {
+  margin: 0;
+}
+
+#profile-icon {
+  font-size: 0;
+}
+
+#profile-icon img:hover {
+  scale: 1.1;
 }
 
 #searchbar {
