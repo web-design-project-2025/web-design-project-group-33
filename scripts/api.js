@@ -19,19 +19,5 @@ fetch(
   .then((data) => {
     //testing if it works
     console.log(data);
-    data.results.forEach((movie) => {
-      const title = document.createElement("h1");
-      title.innerText = movie.title;
-
-      const poster = document.createElement("img");
-      if (movie.poster_path) {
-        poster.src = baseUrl + movie.poster_path;
-      } else {
-        poster.src = "placeholder.jpg";
-      }
-
-      document.body.append(title);
-      document.body.append(poster);
-    });
   })
   .catch((err) => console.error(err));
