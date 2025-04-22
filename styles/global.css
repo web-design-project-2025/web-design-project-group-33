@@ -200,6 +200,7 @@ footer {
   margin-bottom: 30rem;
 }
 
+
 /* Profile Page */
 
 .profile-page {
@@ -268,3 +269,33 @@ footer {
 .button-red:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+.test-page {
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Movie Card Component */
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.movie-card .poster {
+  width: 155px;
+  height: 231px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.movie-card .title {
+  margin: 0;
+  font-family: var(--Grotesk);
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
