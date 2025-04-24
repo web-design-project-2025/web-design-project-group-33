@@ -1,4 +1,5 @@
 import { MovieCard } from "./scripts/components/movieCard.js";
+import { ReviewComponent } from "./scripts/components/reviewComponent.js";
 
 //example data
 const movies = [
@@ -12,8 +13,9 @@ const movies = [
 
 //example usage of moviecard
 document.getElementById("app").innerHTML = `
-      <h1 style="color:white">Movies</h1>
-      <div style="display:flex;flex-direction:row;gap:16px;">
-          ${movies.map((movie) => MovieCard(movie)).join("")}
-      </div>
-  `;
+       <h1 style="color:white">Movies</h1>
+       <div style="display:flex;flex-direction:row;gap:16px;">
+           ${movies.map((movie) => MovieCard(movie)).join("")}
+       </div>
+       ${ReviewComponent()}
+   `;
