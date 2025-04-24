@@ -427,6 +427,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* TESTPAGE STUFF FOR TESTING REMOVE LATER */
 .test-page {
   margin: 30px;
   display: flex;
@@ -434,6 +435,11 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 3rem;
+}
+
+.testcomments#comments {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Movie Card Component */
@@ -459,11 +465,6 @@ footer {
 }
 
 /* Review Comment */
-
-#comments {
-  display: flex;
-  flex-direction: column;
-}
 
 .review-comment {
   display: flex;
