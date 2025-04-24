@@ -430,8 +430,10 @@ footer {
 .test-page {
   margin: 30px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 3rem;
 }
 
 /* Movie Card Component */
@@ -454,4 +456,44 @@ footer {
   font-size: 14px;
   font-weight: bold;
   color: #ffffff;
+}
+
+/* Review Comment */
+
+#comments {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-comment {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-family: var(--Grotesk);
+  font-size: 16px;
+  width: 500px;
+  gap: 0.5rem;
+  padding: 5px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 450;
+  border-bottom: var(--tertiary-grey) 1px solid;
+}
+.review-comment .user-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.review-comment .picture {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+}
+.review-comment .name {
+  font-weight: 450;
+}
+.review-comment .content-container {
+  white-space: normal;
+  overflow-wrap: break-word;
 }
