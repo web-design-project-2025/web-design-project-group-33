@@ -1,16 +1,39 @@
-export const ReviewTextBox = (reviewTextBox) => {
-  return `  
-    <form class="review-text-box">
+export const ReviewTextBox = () => {
+  const reviewForm = document.createElement("form");
+  reviewForm.className = "review-text-box";
+  reviewForm.innerHTML = `  
       <textarea placeholder="Write your review here..."></textarea>
       <div class="rating">
         <label for="Rating">Rating:</label>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="rate-button"></span>
+        <span class="rate-button"></span>
+        <span class="rate-button"></span>
+        <span class="rate-button"></span>
+        <span class="rate-button"></span>
+        <input type="hidden" name="rating" id="ratingValue" value=""/>
       </div>
       <button class="button" type="submit">Post</button>
-    </form>
       `;
+
+  reviewForm.addEventListener("click", (e) => {
+    if (e.target.className === "rate-button") {
+      const buttons = document.querySelectorAll(".rate-button");
+      const ratingValue = document.getElementById("ratingValue");
+
+      buttons.forEach((button) => {
+        button.id = "deselected";
+      });
+
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].id = "selected";
+        if (e.target === buttons[i]) {
+          console.log(i + 1);
+          ratingValue.value = i + 1;
+          return;
+        }
+      }
+    }
+  });
+
+  return reviewForm;
 };

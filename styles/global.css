@@ -341,12 +341,16 @@ footer {
   margin-right: 0.6rem;
 }
 
-.rating span {
+.rate-button {
   margin-top: 0.1rem;
   background-color: var(--tertiary-grey);
   width: 1.1rem;
   height: 1.1rem;
   border-radius: 50%;
+}
+
+.rate-button#selected {
+  background-color: var(--red);
 }
 
 /* Profile Page */

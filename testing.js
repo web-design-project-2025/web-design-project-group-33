@@ -11,11 +11,14 @@ const movies = [
   { title: "Example Title", poster: "example.jpg" },
 ];
 
-//example usage of moviecard
+// example usage of moviecard
 document.getElementById("app").innerHTML = `
       <h1 style="color:white">Movies</h1>
       <div style="display:flex;flex-direction:row;gap:16px;">
           ${movies.map((movie) => MovieCard(movie)).join("")}
       </div>
-    ${ReviewTextBox()}
   `;
+
+const TextBox = ReviewTextBox();
+
+document.getElementById("app").appendChild(TextBox);
