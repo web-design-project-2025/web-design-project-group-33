@@ -440,6 +440,12 @@ footer {
 .testcomments#comments {
   display: flex;
   flex-direction: column;
+  width: 500px;
+}
+@media (max-width: 600px) {
+  .testcomments#comments {
+    width: 100%;
+  }
 }
 
 /* Movie Card Component */
@@ -472,7 +478,7 @@ footer {
   color: #ffffff;
   font-family: var(--Grotesk);
   font-size: 16px;
-  width: 500px;
+  width: 100%;
   gap: 0.5rem;
   padding: 5px;
   padding-top: 1rem;
@@ -480,6 +486,7 @@ footer {
   font-weight: 450;
   border-bottom: var(--tertiary-grey) 1px solid;
 }
+
 .review-comment .user-container {
   display: flex;
   flex-direction: row;
