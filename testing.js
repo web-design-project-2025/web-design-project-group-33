@@ -1,4 +1,5 @@
 import { MovieCard } from "./scripts/components/movieCard.js";
+import { ReviewTextBox } from "./scripts/components/reviewTextBox.js";
 
 //example data
 const movies = [
@@ -16,4 +17,5 @@ document.getElementById("app").innerHTML = `
       <div style="display:flex;flex-direction:row;gap:16px;">
           ${movies.map((movie) => MovieCard(movie)).join("")}
       </div>
+    ${ReviewTextBox()}
   `;
