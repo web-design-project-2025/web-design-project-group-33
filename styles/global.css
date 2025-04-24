@@ -9,6 +9,11 @@
   --white: #ffffff;
 }
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--secondary-grey);
   margin: 0;
@@ -16,7 +21,7 @@ body {
 
 h1 {
   font-family: var(--Grotesk);
-  font-weight: 900;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -276,11 +281,85 @@ footer {
 }
 
 .about-text {
-  color: var(--eggshell);
+  color: var(--eggshel);
   padding: 1.25rem;
   text-align: center;
   margin-top: 10rem;
   margin-bottom: 30rem;
+}
+
+/* Profile Page */
+
+.profile-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  align-items: center;
+  column-gap: 10%;
+}
+
+#profile-image {
+  border-radius: 50%;
+  max-width: 40%;
+  width: 391px;
+}
+
+#profile-detail {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+#profile-stats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: small;
+  gap: 5vw;
+  margin-top: 1rem;
+}
+
+.profile-columns {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5vh;
+}
+
+.profile-text p {
+  margin: 0;
+  font-weight: 450;
+  color: white;
+}
+
+.profile-text h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.profile-rows button {
+  height: 50%;
+}
+
+.button-red {
+  background-color: var(--red);
+  color: var(--eggshell);
+  font-weight: bold;
+  border: 0;
+  border-radius: 100px;
+  width: 150px;
+  height: 55px;
+  padding: 6px 0;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-red:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .test-page {
