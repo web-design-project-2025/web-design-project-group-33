@@ -2,7 +2,7 @@ export const ReviewComponent = (review) => {
   return `
     <article class="reviewComponentContainer">
       <img
-        src=""
+        src="/assets/pictures/morbius-poster.jpg"
         alt="MovieName+Poster"
         class="moviePosterReviewComponent"
       />
