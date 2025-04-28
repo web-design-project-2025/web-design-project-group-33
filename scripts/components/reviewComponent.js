@@ -51,7 +51,7 @@ export async function ReviewComponent(review) {
       const rateButtons = reviewComponent.querySelectorAll(".rate-button");
       rateButtons.forEach((button, index) => {
         if (index < review.rating) {
-          button.id = "rated";
+          button.id = "selected";
         }
       });
     });
