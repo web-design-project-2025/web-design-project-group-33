@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "user_id": 1,
+    "movie_id": 9607,
+    "rating": 4,
+    "content": "Pure nonsense from beginning to end. I kept hoping it would get better, but it never did.",
+    "likes": 204
+  },
+  {
+    "id": 2,
+    "user_id": 2,
+    "movie_id": 14164,
+    "rating": 1,
+    "content": "Terrible plot and even worse acting.",
+    "likes": 179
+  },
+  {
+    "id": 3,
+    "user_id": 3,
+    "movie_id": 13805,
+    "rating": 3,
+    "content": "I can't believe I sat through the whole thing. It was boring and confusing. The characters made no sense.",
+    "likes": 488
+  },
+  {
+    "id": 4,
+    "user_id": 4,
+    "movie_id": 485774,
+    "rating": 5,
+    "content": "One of the worst movies I've ever seen. Completely predictable and painfully slow.",
+    "likes": 74
+  },
+  {
+    "id": 5,
+    "user_id": 5,
+    "movie_id": 9760,
+    "rating": 1,
+    "content": "Boring, confusing, and just plain bad. I wish I had never heard of this movie.",
+    "likes": 14
+  },
+  {
+    "id": 6,
+    "user_id": 6,
+    "movie_id": 205321,
+    "rating": 2,
+    "content": "Save yourself and skip this disaster. It's not even 'so bad it's good'.",
+    "likes": 61
+  },
+  {
+    "id": 7,
+    "user_id": 7,
+    "movie_id": 17473,
+    "rating": 4,
+    "content": "Painful to watch from start to finish. The dialogue was cringey beyond belief.",
+    "likes": 58
+  },
+  {
+    "id": 8,
+    "user_id": 8,
+    "movie_id": 580,
+    "rating": 1,
+    "content": "Absolutely no redeeming qualities. The writing, directing, and acting were all bottom of the barrel.",
+    "likes": 207
+  },
+  {
+    "id": 9,
+    "user_id": 9,
+    "movie_id": 7278,
+    "rating": 4,
+    "content": "How did this even get made? Someone needs to answer for this travesty.",
+    "likes": 237
+  },
+  {
+    "id": 10,
+    "user_id": 10,
+    "movie_id": 10214,
+    "rating": 3,
+    "content": "Felt like a bad joke the whole time. Nothing made sense. I almost fell asleep halfway through.",
+    "likes": 63
+  },
+  {
+    "id": 11,
+    "user_id": 1,
+    "movie_id": 218043,
+    "rating": 2,
+    "content": "Regret watching this more than anything. Honestly, it insulted my intelligence. Avoid at all costs.",
+    "likes": 460
+  },
+  {
+    "id": 12,
+    "user_id": 2,
+    "movie_id": 351460,
+    "rating": 3,
+    "content": "An utter mess with zero direction. It's like they forgot to write a script. What a disaster.",
+    "likes": 516
+  },
+  {
+    "id": 13,
+    "user_id": 3,
+    "movie_id": 439015,
+    "rating": 5,
+    "content": "Nothing about this was enjoyable. Even the soundtrack was annoying.",
+    "likes": 507
+  },
+  {
+    "id": 14,
+    "user_id": 4,
+    "movie_id": 9708,
+    "rating": 1,
+    "content": "This movie actually made me angry. It had potential but somehow managed to ruin every good idea. Truly disappointing.",
+    "likes": 3
+  },
+  {
+    "id": 15,
+    "user_id": 5,
+    "movie_id": 71668,
+    "rating": 2,
+    "content": "Complete trash. Would not recommend. Honestly, I'd rather watch paint dry.",
+    "likes": 57
+  },
+  {
+    "id": 16,
+    "user_id": 6,
+    "movie_id": 40264,
+    "rating": 4,
+    "content": "Worse than I ever expected. I can't imagine anyone genuinely enjoying this.",
+    "likes": 183
+  },
+  {
+    "id": 17,
+    "user_id": 7,
+    "movie_id": 415,
+    "rating": 3,
+    "content": "A disaster in every way. Laughably bad effects and wooden performances. Please don't waste your money.",
+    "likes": 78
+  },
+  {
+    "id": 18,
+    "user_id": 8,
+    "movie_id": 71880,
+    "rating": 3,
+    "content": "I'd give it zero stars if I could. Not even funny-bad, just bad. Stay far away.",
+    "likes": 196
+  },
+  {
+    "id": 19,
+    "user_id": 9,
+    "movie_id": 166424,
+    "rating": 4,
+    "content": "Literally painful to sit through. Every moment dragged on forever.",
+    "likes": 17
+  },
+  {
+    "id": 20,
+    "user_id": 10,
+    "movie_id": 472838,
+    "rating": 2,
+    "content": "Please don't waste your time on this. So many better things you could be doing. I regret every second.",
+    "likes": 246
+  }
+]
