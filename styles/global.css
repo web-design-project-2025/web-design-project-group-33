@@ -406,9 +406,10 @@ footer {
 }
 
 .poster-review-component {
-  height: 11rem;
+  height: 9rem;
   object-fit: cover;
   flex-shrink: 0;
+  border-radius: 4px;
 }
 
 .picture-username-movietitle {
@@ -464,6 +465,7 @@ footer {
 
 .review-content p {
   margin: 1rem 0 1rem 0;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 768px) {
@@ -473,10 +475,12 @@ footer {
   .like-comment-share-rating small {
     display: none;
   }
+  .review-component-container {
+    width: 90%;
+  }
 }
 
 /* temp!!!!!!!!!!!!!!!!: already exists in main */
-
 .rating {
   display: flex;
   gap: 0.25rem;
@@ -492,4 +496,9 @@ footer {
   width: 1.1rem;
   height: 1.1rem;
   border-radius: 50%;
+}
+/* temp!!!!!!!!!!!!!!!!: already exists in main */
+
+.rate-button#rated {
+  background-color: var(--red);
 }
