@@ -340,7 +340,7 @@ footer {
   gap: 0.25rem;
 }
 
-.rating > :nth-child(1) {
+.rating label {
   margin-right: 0.6rem;
 }
 
@@ -479,9 +479,8 @@ footer {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  margin: 2rem;
+  margin: 2rem 0 2rem 0;
   color: var(--white);
-  width: 32rem;
 }
 
 .poster-review-component {
@@ -593,4 +592,100 @@ footer {
 .review-comment .content-container {
   white-space: normal;
   overflow-wrap: break-word;
+}
+
+/* Movie page */
+
+.movie-page {
+  color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 0 2.5rem;
+  margin: 3rem 2rem 7rem 2rem;
+}
+
+.movie-page .poster-review-rating {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  grid-column: 1 / 3;
+  justify-self: end;
+}
+
+.movie-page .poster {
+  border-radius: 8px;
+}
+
+.movie-page .review-rating {
+  display: flex;
+  align-items: center;
+}
+
+.movie-page .article-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  grid-column: 3 / 6;
+}
+
+.movie-page .top-reviews {
+  grid-column: 3 / 6;
+  grid-row: 2;
+  width: 36.5rem;
+}
+
+.movie-page .description {
+  width: 32rem;
+}
+
+.movie-page h1,
+.movie-page h2 {
+  background-color: var(--red);
+  padding: 0.5rem;
+  display: inline-block;
+  border-radius: 3px;
+  width: 38rem;
+  color: var(--eggshell);
+}
+
+.movie-page h1 {
+  font-size: 3rem;
+}
+
+.movie-page h1 span {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.movie-page p span {
+  font-weight: 600;
+}
+
+.write-review-button {
+  width: 9rem;
+  height: 3rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--eggshell);
+  background-color: var(--red);
+  border: none;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1106px) {
+  .movie-page h1,
+  .movie-page h2,
+  .movie-page .top-reviews,
+  .movie-page .description {
+    width: 100%;
+  }
+  .movie-page .top-reviews {
+    grid-column: 2 / 5;
+  }
+
+  @media screen and (max-width: 768px) {
+  }
 }
