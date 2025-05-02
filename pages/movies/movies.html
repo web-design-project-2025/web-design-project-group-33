@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/kxb7wrw.css" />
     <link rel="stylesheet" href="/styles/global.css" />
   </head>
+  <script type="module" src="/scripts/pages/movies/movies.js"></script>
 
   <body>
     <nav class="navbar">
@@ -39,35 +40,23 @@
       </div>
     </nav>
 
-    <section id="movies-trending" class="movies-section">
-      <div class="movies-section-header">
-        <h2 class="movies-section-title">Trending Movies</h2>
-        <a href="" class="movies-view-more">View more...</a>
-      </div>
-      <div class="movies-grid">
-        <a href=""><img src="assets/pictures/morbius-poster.jpg" alt="" class="movie-poster"/> </a>
-        <a href=""><img src="assets/pictures/morbius-poster.jpg" alt="" class="movie-poster"/> </a>
-        <a href=""><img src="assets/pictures/morbius-poster.jpg" alt="" class="movie-poster"/> </a>
-        <a href=""><img src="assets/pictures/morbius-poster.jpg" alt="" class="movie-poster"/> </a>
-        <a href=""><img src="assets/pictures/morbius-poster.jpg" alt="" class="movie-poster"/> </a>
-        <a href=""><img src="assets/pictures/morbius-poster.jpg" alt="" class="movie-poster"/> </a>
-      </div>
-    </section>
+    <div class="movies-page">
+      <section id="movies-trending" class="movies-section">
+        <div class="movies-section-header">
+          <h2 class="movies-section-title">Trending Movies</h2>
+          <a href="" class="movies-view-more">View more...</a>
+        </div>
+        <div id="trending" class="movies-container"></div>
+      </section>
 
-    <section id="movies-roasted" class="movies-section">
-      <div class="movies-section-header">
-        <h2 class="movies-section-title">Most Roasted Movies</h2>
-        <a href="" class="movies-view-more">View more...</a>
-      </div>
-      <div class="movies-grid">
-        <a href=""><img src="assets/pictures/morbius-poster.jpg" alt="" class="movie-poster"/> </a>
-        <a href=""><img src="assets/pictures/morbius-poster.jpg" alt="" class="movie-poster"/> </a>
-        <a href=""><img src="assets/pictures/morbius-poster.jpg" alt="" class="movie-poster"/> </a>
-        <a href=""><img src="assets/pictures/morbius-poster.jpg" alt="" class="movie-poster"/> </a>
-        <a href=""><img src="assets/pictures/morbius-poster.jpg" alt="" class="movie-poster"/> </a>
-        <a href=""><img src="assets/pictures/morbius-poster.jpg" alt="" class="movie-poster"/> </a>
-      </div>
-    </section>
+      <section id="movies-roasted" class="movies-section">
+        <div class="movies-section-header">
+          <h2 class="movies-section-title">Most Roasted Movies</h2>
+          <a href="" class="movies-view-more">View more...</a>
+        </div>
+        <div id="top" class="movies-container"></div>
+      </section>
+    </div>
 
     <footer>
       <div class="footer-container-links">

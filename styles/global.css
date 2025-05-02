@@ -9,6 +9,10 @@
   --white: #ffffff;
 }
 
+html {
+  background-color: var(--primary-grey);
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -457,6 +461,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  cursor: pointer;
 }
 
 .movie-card .poster {
@@ -595,47 +600,103 @@ footer {
   overflow-wrap: break-word;
 }
 
-
 /*MOVIES PAGE*/
+
+.movies-page {
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.movies-container {
+  margin-top: 2rem;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+
 .movies-section {
-  margin: 40px;
+  margin-top: 3rem;
+  margin-bottom: 4.5rem;
 }
 
 .movies-section-header {
   background: var(--red);
-  padding: 12px 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-radius: 5px;
+  width: 100%;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.4rem;
+  padding-left: 1rem;
 }
 
 .movies-section-title {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 32px;
   color: var(--eggshell);
   font-family: var(--Grotesk);
 }
 
-.movies-view-more{
+.movies-view-more {
   color: var(--eggshell);
   text-decoration: underline;
-  font-size: 0.9rem;
+  font-size: 14px;
+  text-decoration: none;
 }
 
-.movies-grid  {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1 fr));
-  gap: 15px;
-  margin-top: 20px;
+.movies-view-more:hover {
+  opacity: 0.8;
+}
+.movies-view-more:active {
+  opacity: 0.7;
 }
 
-.movie-poster {
-  width: 100%;
-  border-radius: 5px;
-  transition: transform 0.2s ease-in-out;
+@media (min-width: 768px) {
+  .movies-section-title {
+    font-size: 36px;
+  }
+
+  .movies-view-more {
+    font-size: 16px;
+  }
+  .movies-page {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .movies-container {
+    margin-left: 38px;
+    margin-right: 38px;
+  }
+  .movies-section-header {
+    padding-left: 2rem;
+  }
 }
 
-.movie-poster:hover {
-  transform: scale(1.05);
+@media (min-width: 820px) {
+  .movies-container {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 992px) {
+  .movies-page {
+    margin-bottom: 3rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .movies-page {
+    margin-left: 12rem;
+    margin-right: 12rem;
+  }
 }
