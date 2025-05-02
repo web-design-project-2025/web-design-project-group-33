@@ -16,16 +16,11 @@
           class="logo"
         />
       </a>
-      <!-- <div class="navbar-center-container"> -->
       <a href="pages\reviews\reviews.html">Reviews</a>
       <a href="pages\movies\movies.html">Movies</a>
       <a href="about.html">About</a>
       <input id="searchbar" type="text" placeholder="Search..." />
-      <!-- </div> -->
       <div id="profile-pic-container">
-        <!-- <a href="pages\profile\profile.html"
-          ><p id="profile-text">Profile</p></a
-        > -->
         <a id="profile-icon" href="pages\profile\profile.html">
           <img
             src="assets\pictures\profil.jpg"
@@ -46,7 +41,7 @@
     </div>
     <nav class="mobile-bottom-navbar">
       <button class="hamburger" id="hamburger-btn">☰</button>
-      <input id="searchbar" type="text" placeholder="Search..." />
+      <img src="assets/icons/search.svg" alt="" class="search" />
       <a id="profile-icon" href="pages\profile\profile.html">
         <img
           src="assets\pictures\profil.jpg"
@@ -55,23 +50,36 @@
         />
       </a>
     </nav>
-    <div id="mobile-menu" class="mobile-menu hidden">
+    <div id="mobile-menu" class="mobile-menu">
       <img
         src="assets\icons\movie-roast-small.svg"
         alt="logo hamburger"
         class="logo-burger"
       />
-      <a href="pages/reviews/reviews.html">Reviews</a>
-      <a href="pages/movies/movies.html">Movies</a>
-      <a href="about.html">About</a>
-      <a href="pages/profile/profile.html">Profile</a>
+      <div class="links">
+        <a href="pages/reviews/reviews.html">Reviews</a>
+        <a href="pages/movies/movies.html">Movies</a>
+        <a href="about.html">About</a>
+        <a href="pages/profile/profile.html">Profile</a>
+      </div>
     </div>
+
+    <!-- PUT THIS IN A JS FILE LATER -->
     <script>
       const hamburgerBtn = document.getElementById("hamburger-btn");
       const mobileMenu = document.getElementById("mobile-menu");
 
       hamburgerBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("open");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (
+          !mobileMenu.contains(e.target) &&
+          !hamburgerBtn.contains(e.target)
+        ) {
+          mobileMenu.classList.remove("open");
+        }
       });
     </script>
 
