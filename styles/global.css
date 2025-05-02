@@ -556,6 +556,10 @@ footer {
   .review-component-container {
     width: 90%;
   }
+  .review-content p,
+  .like-comment-share-rating {
+    padding-left: 2.7rem;
+  }
 }
 
 /* Review Comment */
@@ -601,7 +605,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 0 2.5rem;
+  gap: 2.5rem 1rem;
   margin: 3rem 2rem 7rem 2rem;
 }
 
@@ -620,6 +624,18 @@ footer {
 .movie-page .review-rating {
   display: flex;
   align-items: center;
+}
+
+.movie-page .rating-circles-text-container,
+.movie-page .rating-circles-text-container-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.movie-page .rating-text {
+  font-weight: 600;
 }
 
 .movie-page .article-content {
@@ -650,11 +666,11 @@ footer {
 }
 
 .movie-page h1 {
-  font-size: 3rem;
+  font-size: 2.4rem;
 }
 
 .movie-page h1 span {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
@@ -662,17 +678,18 @@ footer {
   font-weight: 600;
 }
 
-.write-review-button {
-  width: 9rem;
+.movie-page .write-review-button {
+  width: 7.5rem;
   height: 3rem;
-  border-radius: 5px;
+  border-radius: 1000px;
   font-weight: 600;
   font-size: 0.8rem;
   color: var(--eggshell);
   background-color: var(--red);
   border: none;
-  margin: 1rem;
+  margin: 1rem 0 1rem 0;
   cursor: pointer;
+  margin-right: 0.5rem;
 }
 
 @media screen and (max-width: 1106px) {
@@ -685,7 +702,58 @@ footer {
   .movie-page .top-reviews {
     grid-column: 2 / 5;
   }
+}
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .movie-page h1 {
+    background-color: transparent;
+    font-size: 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+  }
+  .movie-page h2 {
+    font-size: 1.5rem;
+  }
+  .movie-page h1 span {
+    font-size: 1rem;
+  }
+  .movie-page .poster-review-rating {
+    width: 8rem;
+    grid-column: 1 / 2;
+  }
+  .movie-page .write-review-button {
+    margin: 1rem 0 0 0;
+  }
+  .movie-page {
+    gap: 2.5rem 1rem;
+  }
+  .movie-page .top-reviews {
+    grid-column: 1 / 6;
+  }
+  .movie-page .article-content {
+    grid-column: 2 / 6;
+  }
+  .movie-page .article-content p {
+    font-size: 0.9rem;
+  }
+  .movie-page .rating-circles-text-container {
+    display: none;
+  }
+  .movie-page .rating-circles-text-container-mobile {
+    flex-direction: row;
+    margin-bottom: 0.6rem;
+  }
+  .movie-page .rating-text {
+    margin-right: 0.4rem;
+  }
+  .movie-page .article-content {
+    gap: 0.8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .movie-page .rating-circles-text-container-mobile {
+    display: none;
   }
 }
