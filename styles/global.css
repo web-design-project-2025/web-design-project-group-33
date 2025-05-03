@@ -17,6 +17,7 @@
 body {
   background-color: var(--secondary-grey);
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -79,11 +80,18 @@ class="button button--grey"   for grey
 
 /*NAVBAR*/
 .navbar {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
   background-color: var(--primary-grey);
+  height: 7rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 1rem;
 }
 
 .navbar-center-container {
@@ -95,6 +103,7 @@ class="button button--grey"   for grey
 .logo {
   height: 5rem;
   border: 0;
+  margin-top: -10px;
 }
 
 .profile-pic {
@@ -106,14 +115,16 @@ class="button button--grey"   for grey
 .navbar p {
   text-decoration: none;
   color: var(--eggshell);
-  margin: 0rem 1.6rem 0rem 1.6rem;
-  font-size: 1.1rem;
+  font-size: 20px;
   font-weight: 600;
   font-family: var(--Grotesk);
 }
 
-.navbar > :nth-child(2) {
-  grid-column: 2 / 5;
+@media (min-width: 992px) {
+  .navbar a,
+  .navbar p {
+    font-size: 24px;
+  }
 }
 
 .navbar p:hover,
@@ -124,15 +135,7 @@ class="button button--grey"   for grey
 #profile-pic-container {
   display: flex;
   align-items: center;
-  justify-self: end;
-}
-
-#profile-text {
-  margin: 0;
-}
-
-#profile-icon {
-  font-size: 0;
+  gap: 1rem;
 }
 
 #profile-icon img:hover {
@@ -145,10 +148,113 @@ class="button button--grey"   for grey
   border: 1px solid #131011;
   width: 20rem;
   border-radius: 1000px;
-  margin: 3rem;
+
   height: 1.6rem;
   padding-left: 1rem;
   outline: none;
+}
+
+/*NAV-Mobile*/
+.mobile-top-bar {
+  display: none;
+  padding: 1rem;
+  background-color: var(--primary-grey);
+}
+
+.mobile-logo {
+  height: 3rem;
+}
+
+.mobile-bottom-navbar {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  background-color: var(--primary-grey);
+  overflow: hidden;
+}
+
+/*Hamburger links*/
+.mobile-menu {
+  background-color: var(--primary-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-bottom: 7rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 100%;
+  z-index: 1000;
+  font-size: 24px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.mobile-menu img {
+  display: flex;
+  width: 70%;
+}
+
+.mobile-menu .links {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.mobile-menu a {
+  color: var(--eggshell);
+  text-decoration: none;
+  font-family: var(--Grotesk);
+  font-weight: 600;
+}
+
+.hamburger {
+  height: 2rem;
+  width: 5rem;
+  border: none;
+  padding: 0;
+  margin: 0;
+  all: unset;
+  font-size: 2rem;
+  color: var(--eggshell);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.mobile-bottom-navbar .search {
+  cursor: pointer;
+}
+
+.mobile-bottom-navbar > button,
+.mobile-bottom-navbar > a {
+  position: relative;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobile-top-bar,
+  .mobile-bottom-navbar {
+    display: flex;
+  }
 }
 
 /* Footer styling */
