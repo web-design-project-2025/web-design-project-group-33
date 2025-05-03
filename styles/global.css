@@ -589,10 +589,13 @@ footer {
 .review-component-container {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  justify-content: center;
+
+  gap: 22px;
   margin: 2rem;
   color: var(--white);
-  width: 32rem;
+  width: 700px;
+  line-height: 23px;
 }
 
 .poster-review-component {
@@ -631,6 +634,24 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 16px;
+  gap: 2rem;
+}
+
+.like-comment-share-rating span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.like-comment-share-rating .rating {
+  margin-left: auto;
+  margin-right: 0.5rem;
+  font-size: 17px;
+  gap: 5px;
+  align-items: center;
+}
+.like-comment-share-rating .rating .rate-button {
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 .like-comment-share-rating button {
@@ -641,35 +662,50 @@ footer {
 
   display: flex;
   flex-direction: row;
-  align-items: center;
-
-  font-size: 1.5rem;
-  gap: 1rem;
-  margin-right: 1rem;
+  gap: 3px;
 }
 
 .review-content {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .review-content p {
   margin: 1rem 0 1rem 0;
-  line-height: 1.5;
+  font-size: 17px;
+  font-weight: 350;
+}
+
+.divider {
+  width: 100%;
+  border: solid var(--tertiary-grey) 1px;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 91%;
 }
 
 @media screen and (max-width: 768px) {
   .poster-review-component {
     display: none;
   }
-  .like-comment-share-rating small {
-    display: none;
+  .review-content {
+    width: 80%;
   }
-  .review-component-container {
-    width: 90%;
+  .divider {
+    margin-left: 6.5rem;
+    width: 73%;
   }
 }
-
+@media (max-width: 600px) {
+  .review-content {
+    width: 65%;
+  }
+  .divider {
+    margin-left: 9.5rem;
+    width: 60%;
+  }
+}
 /* Review Comment */
 
 .review-comment {
@@ -706,9 +742,63 @@ footer {
   overflow-wrap: break-word;
 }
 
+/* reviews page */
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sort-button {
+  color: var(--eggshell);
+  text-decoration: underline;
+  text-decoration: none;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.sort-button p {
+  font-size: 16px;
+  font-weight: 550;
+}
+
+.sort-menu {
+  display: flex;
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1000;
+  background-color: #171415;
+  color: var(--eggshell);
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 20px;
+  padding: 2rem;
+  padding-left: 1rem;
+}
+
+.sort-menu.open {
+  visibility: visible;
+  pointer-events: auto;
+  cursor: auto;
+}
+
+.sort-menu .option {
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 20px;
+}
+.sort-menu .option:hover {
+  opacity: 0.8;
+}
+.sort-menu .option:active {
+  opacity: 0.6;
+}
+
 /*MOVIES PAGE*/
 
-.movies-page {
+.page-content {
   margin-bottom: 3rem;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -731,7 +821,7 @@ footer {
   margin-bottom: 4.5rem;
 }
 
-.movies-section-header {
+.section-header {
   background: var(--red);
   display: flex;
   border-radius: 5px;
@@ -742,36 +832,36 @@ footer {
   padding-left: 1rem;
 }
 
-.movies-section-title {
+.section-title {
   margin: 0;
   font-size: 32px;
   color: var(--eggshell);
   font-family: var(--Grotesk);
 }
 
-.movies-view-more {
+.view-more {
   color: var(--eggshell);
   text-decoration: underline;
   font-size: 14px;
   text-decoration: none;
 }
 
-.movies-view-more:hover {
+.view-more:hover {
   opacity: 0.8;
 }
-.movies-view-more:active {
+.view-more:active {
   opacity: 0.7;
 }
 
 @media (min-width: 768px) {
-  .movies-section-title {
+  .section-title {
     font-size: 36px;
   }
 
-  .movies-view-more {
+  .view-more {
     font-size: 16px;
   }
-  .movies-page {
+  .page-content {
     margin-left: 4rem;
     margin-right: 4rem;
   }
@@ -780,8 +870,15 @@ footer {
     margin-left: 38px;
     margin-right: 38px;
   }
-  .movies-section-header {
+  .section-header {
     padding-left: 2rem;
+  }
+  .sort-button {
+    margin-left: 9rem;
+  }
+  .sort-button p {
+    font-size: 20px;
+    font-weight: 550;
   }
 }
 
@@ -793,7 +890,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-  .movies-page {
+  .page-content {
     margin-bottom: 3rem;
     margin-left: 8rem;
     margin-right: 8rem;
@@ -801,7 +898,7 @@ footer {
 }
 
 @media (min-width: 1400px) {
-  .movies-page {
+  .page-content {
     margin-left: 12rem;
     margin-right: 12rem;
   }
