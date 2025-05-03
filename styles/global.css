@@ -288,6 +288,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
+  gap: 2rem 0;
 }
 .footer-container-logos {
   display: flex;
@@ -305,7 +306,7 @@ footer {
   width: 9rem;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 768px) {
   .footer-container-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -368,7 +369,7 @@ footer {
 }
 
 .homepage-buttom-section {
-  margin: 0 0 6rem 10%;
+  margin: 2rem 0 6rem 10%;
   color: var(--white);
 }
 
