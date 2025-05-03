@@ -1,8 +1,12 @@
+/* Use these in the HTML
+<script type="module" src="/scripts/main.js"></script>
+<footer id="footer-component"></footer>
+*/
+
 export function FooterComponent() {
-  const footerComponent = document.createElement("footer");
-  footerComponent.id = "footer-component";
+  const footerComponent = document.createElement("div");
+  footerComponent.className = "footer-container-links";
   footerComponent.innerHTML = `  
-      <div class="footer-container-links">
         <div class="footer-container-logos">
           <ul class="footer-ul">
             <li>
@@ -48,7 +52,6 @@ export function FooterComponent() {
           <li>business@movieroast.com</li>
           <li>Jönköping</li>
         </ul>
-      </div>
       `;
 
   return footerComponent;

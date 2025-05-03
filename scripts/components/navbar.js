@@ -1,6 +1,11 @@
+/* Use these in the HTML
+<script type="module" src="/scripts/main.js"></script>
+<nav id="navbar-component"></nav>
+*/
+
 export function NavbarComponent() {
   const navbarComponent = document.createElement("div");
-  navbarComponent.className = "navbar-component";
+  navbarComponent.className = "different-navbar-components";
   navbarComponent.innerHTML = `  
     <nav class="navbar">
       <a href="index.html">
@@ -59,8 +64,8 @@ export function NavbarComponent() {
     </div>
     `;
 
-    const hamburgerBtn = navbarComponent.querySelector("#hamburger-btn");
-    const mobileMenu = navbarComponent.querySelector("#mobile-menu");
+  const hamburgerBtn = navbarComponent.querySelector("#hamburger-btn");
+  const mobileMenu = navbarComponent.querySelector("#mobile-menu");
 
   hamburgerBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("open");
