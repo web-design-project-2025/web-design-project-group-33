@@ -65,7 +65,7 @@ class="button button--grey"   for grey
   height: 2.5rem;
   border-radius: 1000px;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 19px;
   color: var(--eggshell);
   background-color: var(--red);
   border: none;
@@ -107,7 +107,7 @@ class="button button--grey"   for grey
   text-decoration: none;
   color: var(--eggshell);
   margin: 0rem 1.6rem 0rem 1.6rem;
-  font-size: 1.1rem;
+  font-size: 18px;
   font-weight: 600;
   font-family: var(--Grotesk);
 }
@@ -236,7 +236,7 @@ footer {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   color: var(--eggshell);
-  font-size: 2.5rem;
+  font-size: 40px;
 }
 
 .overlay-text-cover > :nth-child(1) {
@@ -263,13 +263,13 @@ footer {
 }
 
 .homepage-buttom-section h3 {
-  font-size: 1.6rem;
+  font-size: 26px;
   width: 21rem;
   margin-bottom: 1rem;
 }
 
 .homepage-buttom-section p {
-  font-size: 1rem;
+  font-size: 16px;
   width: 21rem;
   margin-right: 2rem;
 }
@@ -309,7 +309,7 @@ footer {
   background-color: var(--primary-grey);
   border: none;
   outline: none;
-  font-size: 0.9rem;
+  font-size: 14px;
   caret-color: var(--red);
   resize: none;
   color: var(--white);
@@ -325,7 +325,7 @@ footer {
   margin: 1.2rem 2.5rem 1.2rem 2.5rem;
   font-weight: 600;
   font-family: var(--Grotesk);
-  font-size: 1rem;
+  font-size: 16px;
   color: var(--white);
 }
 
@@ -531,7 +531,7 @@ footer {
   flex-direction: row;
   align-items: center;
 
-  font-size: 1.5rem;
+  font-size: 24px;
   gap: 1rem;
   margin-right: 1rem;
 }
@@ -666,11 +666,11 @@ footer {
 }
 
 .movie-page h1 {
-  font-size: 2.4rem;
+  font-size: 38px;
 }
 
 .movie-page h1 span {
-  font-size: 1.3rem;
+  font-size: 21px;
   font-weight: 600;
 }
 
@@ -683,7 +683,7 @@ footer {
   height: 3rem;
   border-radius: 1000px;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 13px;
   color: var(--eggshell);
   background-color: var(--red);
   border: none;
@@ -707,17 +707,17 @@ footer {
 @media screen and (max-width: 768px) {
   .movie-page h1 {
     background-color: transparent;
-    font-size: 2rem;
+    font-size: 32px;
     padding: 0;
     display: flex;
     flex-direction: column;
     color: var(--white);
   }
   .movie-page h2 {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
   .movie-page h1 span {
-    font-size: 1rem;
+    font-size: 16px;
   }
   .movie-page .poster-review-rating {
     width: 8rem;
@@ -736,7 +736,7 @@ footer {
     grid-column: 2 / 6;
   }
   .movie-page .article-content p {
-    font-size: 0.9rem;
+    font-size: 14px;
   }
   .movie-page .rating-circles-text-container {
     display: none;
