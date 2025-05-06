@@ -1,24 +1,32 @@
+import { getMovies } from "../api/movieData.js";
+
 export async function ReviewComponent(review) {
   const reviewComponent = document.createElement("div");
   reviewComponent.className = "review-component";
 
-  fetch("/data/users.json")
+  const users = await fetch("/data/users.json")
     .then((res) => res.json())
-    .then((data) => {
-      const user = data.find((user) => user.id === review.user_id);
-      reviewComponent.innerHTML = `  
+    .then((data) => data);
+
+  const movies = await getMovies();
+
+  const user = users.find((user) => user.id === review.user_id);
+  const movie = movies.find((movie) => movie.id === review.movie_id);
+  const releaseYear = movie.releaseDate.match(/^\d{4}/)[0];
+
+  reviewComponent.innerHTML = `  
         <article class="review-component-container">
           <img
-            src="/assets/pictures/morbius-poster.jpg"
-            alt="MovieName+Poster"
+            src="${movie.poster}"
+            alt="${movie.name} Poster"
             class="poster-review-component"
           />
           <section class="review-content">
             <div class="picture-username-movietitle">
               <img src="${user.image}" alt="User Profile Picture" />
-              <a href="">${user.name}</a>
+              <a href="review.html?id=${review.id}">${user.name}</a>
               <a href="" class="movie-title-review-component"
-                ><span>${review.movie_id}</span> (${review.movie_id})</a
+                ><span>${movie.title}</span> (${releaseYear})</a
               >
             </div>
             <p>
@@ -26,7 +34,7 @@ export async function ReviewComponent(review) {
             </p>
             <div class="like-comment-share-rating">
               <button>
-                <small>${review.likes}</small>
+                <span>${review.likes}</span>
                 <img src="/assets/icons/heart.svg" alt="Like Button" />
               </button>
               <button>
@@ -44,17 +52,18 @@ export async function ReviewComponent(review) {
                 <span class="rate-button"></span>
               </div>
             </div>
-          </section>
-        </article>
+            </section>
+          </article>
+          
+          <div class="divider" />
         `;
 
-      const rateButtons = reviewComponent.querySelectorAll(".rate-button");
-      rateButtons.forEach((button, index) => {
-        if (index < review.rating) {
-          button.id = "selected";
-        }
-      });
-    });
+  const rateButtons = reviewComponent.querySelectorAll(".rate-button");
+  rateButtons.forEach((button, index) => {
+    if (index < review.rating) {
+      button.id = "selected";
+    }
+  });
 
   return reviewComponent;
 }

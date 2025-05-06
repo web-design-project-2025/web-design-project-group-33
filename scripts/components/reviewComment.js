@@ -1,7 +1,7 @@
 export async function ReviewComment(comment) {
   const reviewComment = document.createElement("div");
   reviewComment.className = "review-comment";
-  fetch("/data/users.json")
+  await fetch("/data/users.json")
     .then((res) => res.json())
     .then((data) => {
       const user = data.find((user) => user.id === comment.user_id);

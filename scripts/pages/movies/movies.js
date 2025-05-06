@@ -3,7 +3,7 @@ import { getMovies } from "../../api/movieData.js";
 
 const trending = document.querySelector(".movies-container#trending");
 const top = document.querySelector(".movies-container#top");
-const page = document.querySelector(".movies-page");
+const page = document.querySelector(".page-content");
 
 const movies = await getMovies();
 
