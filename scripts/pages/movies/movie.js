@@ -11,17 +11,19 @@ const movie = movies.find((movie) => movie.id === movieId);
 
 const poster = document.querySelector(".poster");
 const title = document.querySelector(".title");
-const releaseDate = document.querySelector(".releaseDate");
 const director = document.querySelector(".director");
 const stars = document.querySelector(".stars");
 const description = document.querySelector(".description");
 
 poster.src = movie.poster;
 title.innerText = movie.title;
-releaseDate.innerText = movie.releaseDate;
 director.innerText = movie.director;
 stars.innerText = movie.stars;
 description.innerText = movie.description;
+
+const releaseDate = document.createElement("span");
+releaseDate.innerHTML = movie.releaseDate.match(/^\d{4}/)[0];
+title.appendChild(releaseDate);
 
 const reviews = await fetch("/data/reviews.json")
   .then((res) => res.json())

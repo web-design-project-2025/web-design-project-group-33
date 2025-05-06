@@ -10,78 +10,128 @@
   <body>
     <script type="module" src="/scripts/pages/movies/movie.js"></script>
     <nav class="navbar">
-      <a href="/index.html">
+      <a href="index.html">
         <img
           src="/assets/icons/movie-roast-darkbg.svg"
           alt="Movie-roast-logo"
           class="logo"
         />
       </a>
-      <div class="navbar-center-container">
-        <a href="/pages/reviews/reviews.html">Reviews</a>
-        <a href="/pages/movies/movies.html">Movies</a>
-        <a href="/about.html">About</a>
-        <input id="searchbar" type="text" placeholder="Search..." />
-      </div>
+      <a href="/pages/reviews/reviews.html">Reviews</a>
+      <a href="/pages/movies/movies.html">Movies</a>
+      <a href="about.html">About</a>
+      <input id="searchbar" type="text" placeholder="Search..." />
       <div id="profile-pic-container">
-        <div class="">
-          <a href="pages/profile/profile.html"
-            ><p id="profile-text">Profile</p></a
-          >
-        </div>
         <a id="profile-icon" href="/pages/profile/profile.html">
           <img
-            src="/assets/pictures/Profil.jpg"
+            src="/assets/pictures/profil.jpg"
             alt="Profile Picture"
             class="profile-pic"
           />
         </a>
       </div>
     </nav>
+    <div class="mobile-top-bar">
+      <a href="index.html">
+        <img
+          src="/assets/icons/movie-roast-darkbg.svg"
+          alt="Movie-roast-logo"
+          class="mobile-logo"
+        />
+      </a>
+    </div>
+    <nav class="mobile-bottom-navbar">
+      <button class="hamburger" id="hamburger-btn">☰</button>
+      <img src="/assets/icons/search.svg" alt="" class="search" />
+      <a id="profile-icon" href="/pages/profile/profile.html">
+        <img
+          src="/assets/pictures/profil.jpg"
+          alt="Profile Picture"
+          class="profile-pic"
+        />
+      </a>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu">
+      <img
+        src="/assets/icons/movie-roast-small.svg"
+        alt="logo hamburger"
+        class="logo-burger"
+      />
+      <div class="links">
+        <a href="/pages/reviews/reviews.html">Reviews</a>
+        <a href="/pages/movies/movies.html">Movies</a>
+        <a href="/about.html">About</a>
+        <a href="/pages/profile/profile.html">Profile</a>
+      </div>
+    </div>
+
+    <!-- PUT THIS IN A JS FILE LATER -->
+    <script>
+      const hamburgerBtn = document.getElementById("hamburger-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburgerBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (
+          !mobileMenu.contains(e.target) &&
+          !hamburgerBtn.contains(e.target)
+        ) {
+          mobileMenu.classList.remove("open");
+        }
+      });
+    </script>
+
     <main>
-      <article class="movie-page">
-        <div class="poster-review-rating">
-          <img class="poster" src="" alt="Movie Poster" />
+      <div class="movie-page">
+        <div class="wrapper">
+          <div class="poster-review-rating">
+            <img class="poster" src="" alt="Movie Poster" />
+            <div class="review-rating">
+              <button class="write-review-button">Write Review</button>
+              <div class="rating-circles-text-container">
+                <p class="rating-text">Rating</p>
+                <div class="rating">
+                  <span class="rate-button"></span>
+                  <span class="rate-button"></span>
+                  <span class="rate-button"></span>
+                  <span class="rate-button"></span>
+                  <span class="rate-button"></span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <div class="review-rating">
-            <button class="write-review-button">Write Review</button>
-            <div class="rating-circles-text-container">
-              <p class="rating-text">Rating</p>
-              <div class="rating">
-                <span class="rate-button"></span>
-                <span class="rate-button"></span>
-                <span class="rate-button"></span>
-                <span class="rate-button"></span>
-                <span class="rate-button"></span>
+          <div class="content">
+            <h1 class="title">Title</h1>
+            <div class="article-content">
+              <div>
+                <div class="rating-circles-text-container-mobile">
+                  <p class="rating-text">Rating</p>
+                  <div class="rating">
+                    <span class="rate-button"></span>
+                    <span class="rate-button"></span>
+                    <span class="rate-button"></span>
+                    <span class="rate-button"></span>
+                    <span class="rate-button"></span>
+                  </div>
+                </div>
+                <p>Director <span class="director">Name</span></p>
+                <p>Stars <span class="stars">Names</span></p>
+              </div>
+              <p class="description">Description</p>
+            </div>
+            <div class="review-section">
+              <div class="top-reviews">
+                <h2>Top Reviews</h2>
+                <div class="container" id="reviews"></div>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="article-content">
-          <h1 class="title">Title <span class="releaseDate">Year</span></h1>
-
-          <div>
-            <div class="rating-circles-text-container-mobile">
-              <p class="rating-text">Rating</p>
-              <div class="rating">
-                <span class="rate-button"></span>
-                <span class="rate-button"></span>
-                <span class="rate-button"></span>
-                <span class="rate-button"></span>
-                <span class="rate-button"></span>
-              </div>
-            </div>
-            <p>Director <span class="director">Name</span></p>
-            <p>Stars <span class="stars">Names</span></p>
-          </div>
-          <p class="description">Description</p>
-        </div>
-        <div class="top-reviews">
-          <h2>Top Reviews</h2>
-          <div id="reviews"></div>
-        </div>
-      </article>
+      </div>
     </main>
     <footer>
       <div class="footer-container-links">
