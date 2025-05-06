@@ -70,7 +70,7 @@ class="button button--grey"   for grey
   height: 2.5rem;
   border-radius: 1000px;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 19px;
   color: var(--eggshell);
   background-color: var(--red);
   border: none;
@@ -119,7 +119,8 @@ class="button button--grey"   for grey
 .navbar p {
   text-decoration: none;
   color: var(--eggshell);
-  font-size: 20px;
+  margin: 0rem 1.6rem 0rem 1.6rem;
+  font-size: 18px;
   font-weight: 600;
   font-family: var(--Grotesk);
 }
@@ -347,7 +348,7 @@ footer {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   color: var(--eggshell);
-  font-size: 2.5rem;
+  font-size: 40px;
 }
 
 .overlay-text-cover > :nth-child(1) {
@@ -374,13 +375,13 @@ footer {
 }
 
 .homepage-buttom-section h3 {
-  font-size: 1.6rem;
+  font-size: 26px;
   width: 21rem;
   margin-bottom: 1rem;
 }
 
 .homepage-buttom-section p {
-  font-size: 1rem;
+  font-size: 16px;
   width: 21rem;
   margin-right: 2rem;
 }
@@ -420,7 +421,7 @@ footer {
   background-color: var(--primary-grey);
   border: none;
   outline: none;
-  font-size: 0.9rem;
+  font-size: 14px;
   caret-color: var(--red);
   resize: none;
   color: var(--white);
@@ -436,7 +437,7 @@ footer {
   margin: 1.2rem 2.5rem 1.2rem 2.5rem;
   font-weight: 600;
   font-family: var(--Grotesk);
-  font-size: 1rem;
+  font-size: 16px;
   color: var(--white);
 }
 
@@ -451,7 +452,7 @@ footer {
   gap: 0.25rem;
 }
 
-.rating > :nth-child(1) {
+.rating label {
   margin-right: 0.6rem;
 }
 
@@ -706,6 +707,10 @@ footer {
     margin-left: 9.5rem;
     width: 60%;
   }
+  .review-content p,
+  .like-comment-share-rating {
+    padding-left: 2.7rem;
+  }
 }
 /* Review Comment */
 
@@ -902,5 +907,204 @@ footer {
   .page-content {
     margin-left: 12rem;
     margin-right: 12rem;
+  }
+}
+
+/* Movie page */
+
+.movie-page {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 3rem 2rem 7rem 2rem;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
+.movie-page .poster-review-rating {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  gap: 1rem;
+  position: sticky;
+  top: 10rem;
+  align-self: flex-start;
+}
+
+.movie-page .poster {
+  border-radius: 8px;
+}
+
+.movie-page .review-rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.movie-page .rating-circles-text-container,
+.movie-page .rating-circles-text-container-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-page .rating-text {
+  font-weight: 600;
+}
+
+.content {
+  width: 37rem;
+}
+
+.review-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15rem;
+  margin-bottom: 10.5rem;
+}
+
+.movie-page .article-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+.movie-page .top-reviews {
+  width: 100%;
+}
+
+.movie-page .top-reviews h2 {
+  width: 100%;
+}
+
+.movie-page .top-reviews .container {
+  margin: 1rem;
+  margin-top: 1.5rem;
+}
+
+.movie-page .review-component-container {
+  width: 100%;
+  margin: 0;
+}
+
+.movie-page .divider {
+  margin-left: 0;
+  width: 100%;
+}
+
+.movie-page .poster-review-component {
+  display: none;
+}
+
+.movie-page .description {
+  width: 100%;
+  line-height: 22px;
+}
+
+.movie-page h1,
+.movie-page h2 {
+  background-color: var(--red);
+  padding: 0.5rem;
+  padding-left: 1rem;
+  display: inline-block;
+  border-radius: 3px;
+  color: var(--eggshell);
+}
+
+.movie-page h1 {
+  font-size: 38px;
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.movie-page h1 span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.movie-page p span {
+  font-weight: 600;
+}
+
+.movie-page .write-review-button {
+  width: 7.5rem;
+  height: 3rem;
+  border-radius: 1000px;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--eggshell);
+  background-color: var(--red);
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .movie-page .poster-review-rating {
+    top: 3rem;
+  }
+  .content {
+    width: auto;
+  }
+  .movie-page .rating label {
+    display: none;
+  }
+  .movie-page .review-content > * {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .movie-page h1 {
+    font-size: 32px;
+  }
+  .movie-page h2 {
+    font-size: 24px;
+  }
+  .movie-page h1 span {
+    font-size: 16px;
+  }
+  .movie-page .poster-review-rating {
+    width: 10rem;
+  }
+
+  .movie-page .review-section {
+    margin-top: 8rem;
+  }
+  .movie-page .article-content {
+    width: auto;
+  }
+  .movie-page .review-content {
+    width: 100%;
+  }
+
+  .movie-page .article-content p {
+    font-size: 15px;
+  }
+  .movie-page .rating-circles-text-container {
+    display: none;
+  }
+  .movie-page .rating-circles-text-container-mobile {
+    flex-direction: row;
+    margin-bottom: 0.6rem;
+  }
+  .movie-page .rating-text {
+    margin-right: 0.4rem;
+  }
+  .movie-page .article-content {
+    gap: 0.8rem;
+  }
+}
+@media screen and (min-width: 890px) {
+  .movie-page .rating-circles-text-container-mobile {
+    display: none;
   }
 }

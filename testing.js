@@ -14,12 +14,12 @@ const movies = [
 ];
 
 // example usage of moviecard
-document.getElementById("app").innerHTML = `
-        <h1 style="color:white">Movies</h1>
-        <div style="display:flex;flex-direction:row;gap:16px;">
-            ${movies.map((movie) => MovieCard(movie)).join("")}
-        </div>
-    `;
+// document.getElementById("app").innerHTML = `
+//         <h1 style="color:white">Movies</h1>
+//         <div style="display:flex;flex-direction:row;gap:16px;">
+//             ${movies.map((movie) => MovieCard(movie)).join("")}
+//         </div>
+//     `;
 
 fetch("/data/reviews.json")
   .then((res) => res.json())
@@ -32,36 +32,36 @@ fetch("/data/reviews.json")
 const TextBox = ReviewTextBox();
 document.getElementById("app").appendChild(TextBox);
 
-const mockComments = [
-  {
-    id: 1,
-    user_id: 1,
-    review_id: 1,
-    content: "this movie sucks",
-  },
-  {
-    id: 2,
-    user_id: 2,
-    review_id: 1,
-    content: "yeah i know right",
-  },
-  {
-    id: 3,
-    user_id: 3,
-    review_id: 1,
-    content: "yes my guy",
-  },
-  {
-    id: 4,
-    user_id: 4,
-    review_id: 1,
-    content:
-      "moviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemovie",
-  },
-];
+// const mockComments = [
+//   {
+//     id: 1,
+//     user_id: 1,
+//     review_id: 1,
+//     content: "this movie sucks",
+//   },
+//   {
+//     id: 2,
+//     user_id: 2,
+//     review_id: 1,
+//     content: "yeah i know right",
+//   },
+//   {
+//     id: 3,
+//     user_id: 3,
+//     review_id: 1,
+//     content: "yes my guy",
+//   },
+//   {
+//     id: 4,
+//     user_id: 4,
+//     review_id: 1,
+//     content:
+//       "moviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemoviemovie",
+//   },
+// ];
 
-//comments example, this one needs async
-mockComments.forEach(async (mockComment) => {
-  const comment = await ReviewComment(mockComment);
-  document.getElementById("comments").appendChild(comment);
-});
+// //comments example, this one needs async
+// mockComments.forEach(async (mockComment) => {
+//   const comment = await ReviewComment(mockComment);
+//   document.getElementById("comments").appendChild(comment);
+// });
