@@ -11,7 +11,7 @@ export function FooterComponent() {
           <ul class="footer-ul">
             <li>
               <img
-                src="assets/icons/movie-roast-darkbg.svg"
+                src="/assets/icons/movie-roast-darkbg.svg"
                 alt="Movie Roast LOGO"
                 id="footer-movie-roast-logo"
               />
@@ -26,7 +26,7 @@ export function FooterComponent() {
             <li>Powered By:</li>
             <a href="https://www.themoviedb.org/">
               <img
-                src="assets/icons/themoviedb-logo.svg"
+                src="/assets/icons/themoviedb-logo.svg"
                 alt="The Movie DB LOGO"
                 id="footer-movie-db-logo"
             /></a>
