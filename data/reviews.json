@@ -4,159 +4,639 @@
     "user_id": 1,
     "movie_id": 9607,
     "rating": 4,
-    "content": "Pure nonsense from beginning to end. I kept hoping it would get better, but it never did.",
+    "content": "This movie felt like the script was written in crayon by someone who just learned how to spell. It’s a mess of random plot points and unrelatable characters. Honestly, it’s like watching a bad reality TV show, but worse.",
     "likes": 204
   },
   {
     "id": 2,
     "user_id": 2,
-    "movie_id": 14164,
-    "rating": 1,
-    "content": "Terrible plot and even worse acting.",
-    "likes": 179
+    "movie_id": 9607,
+    "rating": 2,
+    "content": "A completely forgettable experience. The movie is all over the place and tries to be 'deep' but ends up tripping over its own pretensions. I couldn’t decide if I was bored or confused. Spoiler: both.",
+    "likes": 157
   },
   {
     "id": 3,
     "user_id": 3,
-    "movie_id": 13805,
-    "rating": 3,
-    "content": "I can't believe I sat through the whole thing. It was boring and confusing. The characters made no sense.",
-    "likes": 488
+    "movie_id": 9607,
+    "rating": 1,
+    "content": "This movie was like a headache in film form. The acting is stiff, the plot makes no sense, and I can’t even describe how awful the pacing is. Just when I thought it couldn’t get worse, it did. Avoid this at all costs.",
+    "likes": 412
   },
   {
     "id": 4,
     "user_id": 4,
-    "movie_id": 485774,
-    "rating": 5,
-    "content": "One of the worst movies I've ever seen. Completely predictable and painfully slow.",
-    "likes": 74
+    "movie_id": 9607,
+    "rating": 1,
+    "content": "This film tried so hard to be quirky and unique, but it ended up being an awkward mess of bad ideas. There were more clichés than I could count, and every scene felt like it was dragging me into a personal nightmare.",
+    "likes": 314
   },
   {
     "id": 5,
     "user_id": 5,
-    "movie_id": 9760,
-    "rating": 1,
-    "content": "Boring, confusing, and just plain bad. I wish I had never heard of this movie.",
-    "likes": 14
+    "movie_id": 14164,
+    "rating": 3,
+    "content": "The movie thinks it's clever, but it’s just trying too hard. It had potential at the beginning, but quickly became a string of eye-roll moments. If you love movies that miss the mark but still think they're profound, this is for you.",
+    "likes": 513
   },
   {
     "id": 6,
     "user_id": 6,
-    "movie_id": 205321,
+    "movie_id": 14164,
     "rating": 2,
-    "content": "Save yourself and skip this disaster. It's not even 'so bad it's good'.",
-    "likes": 61
+    "content": "If this movie were a dish, it would be undercooked, bland, and way too salty. There’s no real plot or character development just a lot of wasted potential and missed opportunities.",
+    "likes": 420
   },
   {
     "id": 7,
     "user_id": 7,
-    "movie_id": 17473,
-    "rating": 4,
-    "content": "Painful to watch from start to finish. The dialogue was cringey beyond belief.",
-    "likes": 58
+    "movie_id": 14164,
+    "rating": 1,
+    "content": "I’m still not sure what I watched. It’s like the director found a bunch of random scenes on YouTube and thought, 'Yeah, this will work.' It’s a jumbled mess with no direction and zero payoff. Painful.",
+    "likes": 326
   },
   {
     "id": 8,
     "user_id": 8,
-    "movie_id": 580,
-    "rating": 1,
-    "content": "Absolutely no redeeming qualities. The writing, directing, and acting were all bottom of the barrel.",
-    "likes": 207
+    "movie_id": 14164,
+    "rating": 2,
+    "content": "The movie tried to create drama, but the only thing that actually got dramatic was my level of boredom. There were no twists, no suspense, just a string of awkward moments and bad decisions. You’ve been warned.",
+    "likes": 259
   },
   {
     "id": 9,
     "user_id": 9,
-    "movie_id": 7278,
-    "rating": 4,
-    "content": "How did this even get made? Someone needs to answer for this travesty.",
-    "likes": 237
+    "movie_id": 13805,
+    "rating": 2,
+    "content": "This movie clearly thought it was a lot smarter than it was. The script was full of forced dialogue, the plot was practically non-existent, and the acting was just painful to watch. How did this even get made?",
+    "likes": 184
   },
   {
     "id": 10,
     "user_id": 10,
-    "movie_id": 10214,
-    "rating": 3,
-    "content": "Felt like a bad joke the whole time. Nothing made sense. I almost fell asleep halfway through.",
-    "likes": 63
+    "movie_id": 13805,
+    "rating": 1,
+    "content": "Watching this movie felt like punishment. Every time I thought it couldn’t get worse, it did. It’s like the filmmakers set out to create the most obnoxious and frustrating movie ever and they succeeded.",
+    "likes": 598
   },
   {
     "id": 11,
     "user_id": 1,
-    "movie_id": 218043,
-    "rating": 2,
-    "content": "Regret watching this more than anything. Honestly, it insulted my intelligence. Avoid at all costs.",
-    "likes": 460
+    "movie_id": 13805,
+    "rating": 1,
+    "content": "This movie felt like it was trying to be profound but ended up being a mess of incoherent thoughts and random explosions. The script was so bad, even the actors seemed confused about what was going on.",
+    "likes": 289
   },
   {
     "id": 12,
     "user_id": 2,
-    "movie_id": 351460,
-    "rating": 3,
-    "content": "An utter mess with zero direction. It's like they forgot to write a script. What a disaster.",
-    "likes": 516
+    "movie_id": 13805,
+    "rating": 2,
+    "content": "I get that movies are supposed to be an escape, but this was more like a test of endurance. There were so many missed opportunities, and the pacing was so slow that I almost started rooting for the villain just for some excitement.",
+    "likes": 212
   },
   {
     "id": 13,
     "user_id": 3,
-    "movie_id": 439015,
-    "rating": 5,
-    "content": "Nothing about this was enjoyable. Even the soundtrack was annoying.",
-    "likes": 507
+    "movie_id": 485774,
+    "rating": 2,
+    "content": "The plot felt like it was written on a napkin in a bar at 2 AM. There was no cohesion, no consistency, and no reason to care about any of the characters. It tried to be emotional, but I just felt annoyed.",
+    "likes": 399
   },
   {
     "id": 14,
     "user_id": 4,
-    "movie_id": 9708,
+    "movie_id": 485774,
     "rating": 1,
-    "content": "This movie actually made me angry. It had potential but somehow managed to ruin every good idea. Truly disappointing.",
-    "likes": 3
+    "content": "This movie had the emotional depth of a puddle. The characters were one-dimensional, the plot made no sense, and the ending was so predictable that I started guessing the credits halfway through.",
+    "likes": 186
   },
   {
     "id": 15,
     "user_id": 5,
-    "movie_id": 71668,
-    "rating": 2,
-    "content": "Complete trash. Would not recommend. Honestly, I'd rather watch paint dry.",
-    "likes": 57
+    "movie_id": 485774,
+    "rating": 3,
+    "content": "I can’t tell if this movie was supposed to be a satire or if it was just poorly made. Either way, it was full of clichés, unfunny jokes, and too many awkward pauses. I laughed, but not for the reasons they intended.",
+    "likes": 245
   },
   {
     "id": 16,
     "user_id": 6,
-    "movie_id": 40264,
-    "rating": 4,
-    "content": "Worse than I ever expected. I can't imagine anyone genuinely enjoying this.",
-    "likes": 183
+    "movie_id": 485774,
+    "rating": 2,
+    "content": "The acting was so wooden that I half expected the characters to start sprouting branches. The plot was equally stiff and lifeless, making it a struggle to stay engaged.",
+    "likes": 512
   },
   {
     "id": 17,
     "user_id": 7,
-    "movie_id": 415,
-    "rating": 3,
-    "content": "A disaster in every way. Laughably bad effects and wooden performances. Please don't waste your money.",
-    "likes": 78
+    "movie_id": 9760,
+    "rating": 1,
+    "content": "I’ve watched paint dry more exciting than this. The plot was a mess, the characters had the depth of a cardboard cutout, and the special effects were laughable. Do yourself a favor and skip this disaster.",
+    "likes": 368
   },
   {
     "id": 18,
     "user_id": 8,
-    "movie_id": 71880,
-    "rating": 3,
-    "content": "I'd give it zero stars if I could. Not even funny-bad, just bad. Stay far away.",
-    "likes": 196
+    "movie_id": 9760,
+    "rating": 2,
+    "content": "I kept waiting for something to happen, but every scene dragged on like a bad first date. The pacing was horrible, and the characters had no chemistry. A huge letdown.",
+    "likes": 239
   },
   {
     "id": 19,
     "user_id": 9,
-    "movie_id": 166424,
-    "rating": 4,
-    "content": "Literally painful to sit through. Every moment dragged on forever.",
-    "likes": 17
+    "movie_id": 9760,
+    "rating": 1,
+    "content": "There’s ‘so bad it’s good,’ and then there’s this. It’s bad, but there’s nothing enjoyable about it. Just pure, unadulterated confusion from beginning to end. I almost walked out halfway through.",
+    "likes": 157
   },
   {
     "id": 20,
     "user_id": 10,
+    "movie_id": 9760,
+    "rating": 2,
+    "content": "This movie could have been a great thriller, but instead, it was a boring, drawn-out snooze fest. The story was all over the place, and it never delivered on its potential.",
+    "likes": 451
+  },
+  {
+    "id": 21,
+    "user_id": 4,
+    "movie_id": 17473,
+    "rating": 1,
+    "content": "This movie felt like a fever dream if that dream was written by someone with zero storytelling skills. Every scene was a masterclass in confusion. I kept watching in hope, but the credits rolled and so did my sanity.",
+    "likes": 402
+  },
+  {
+    "id": 22,
+    "user_id": 1,
+    "movie_id": 17473,
+    "rating": 2,
+    "content": "Somehow the trailer managed to hide the fact that nothing actually happens in this movie. It's like the film was allergic to plot and character development. I'm still unsure what I watched, or why.",
+    "likes": 298
+  },
+  {
+    "id": 23,
+    "user_id": 7,
+    "movie_id": 17473,
+    "rating": 2,
+    "content": "Imagine someone adapting a broken printer into a screenplay that's this movie. It spits out nonsense, breaks midway through, and you're just left watching sparks and smoke.",
+    "likes": 176
+  },
+  {
+    "id": 24,
+    "user_id": 6,
+    "movie_id": 17473,
+    "rating": 1,
+    "content": "The acting is wooden, the dialogue is sawdust, and the story should be chopped down entirely. Every time someone spoke, I questioned my life choices. Painfully unwatchable.",
+    "likes": 539
+  },
+  {
+    "id": 25,
+    "user_id": 9,
+    "movie_id": 580,
+    "rating": 1,
+    "content": "This wasn't just bad it was aggressively bad. Like it woke up every morning and chose violence against cinema. It should come with a warning label and a refund coupon.",
+    "likes": 315
+  },
+  {
+    "id": 26,
+    "user_id": 10,
+    "movie_id": 580,
+    "rating": 1,
+    "content": "I wanted to turn it off, but I was too fascinated by how consistently terrible every decision was. It's rare to see a movie fail this evenly across every department.",
+    "likes": 884
+  },
+  {
+    "id": 27,
+    "user_id": 3,
+    "movie_id": 580,
+    "rating": 2,
+    "content": "Watching this movie was like running a marathon with no shoes and no water, only to discover the finish line is just a mirror showing your disappointed face.",
+    "likes": 109
+  },
+  {
+    "id": 28,
+    "user_id": 5,
+    "movie_id": 580,
+    "rating": 3,
+    "content": "The plot was thinner than the toilet paper at a gas station. Characters pop in and out like confused NPCs in a broken video game. I wouldn't wish this film on my worst enemy.",
+    "likes": 740
+  },
+  {
+    "id": 29,
+    "user_id": 2,
+    "movie_id": 7278,
+    "rating": 2,
+    "content": "They could’ve made this movie shorter by just never making it. Every scene added nothing, and somehow still managed to overstay its welcome. Absolute cinematic quicksand.",
+    "likes": 275
+  },
+  {
+    "id": 30,
+    "user_id": 8,
+    "movie_id": 7278,
+    "rating": 1,
+    "content": "I’ve never seen a film try so hard and achieve so little. It’s like watching someone juggle spaghetti messy, sad, and strangely hypnotic.",
+    "likes": 438
+  },
+  {
+    "id": 31,
+    "user_id": 4,
+    "movie_id": 7278,
+    "rating": 2,
+    "content": "This movie was like a magic trick except the only thing that disappeared was my patience. Not even entertaining in a 'so bad it's good' way. Just... bad.",
+    "likes": 189
+  },
+  {
+    "id": 32,
+    "user_id": 6,
+    "movie_id": 7278,
+    "rating": 1,
+    "content": "Every character acted like they were in a completely different movie. The plot wandered off early and never came back. A total mess from start to finish.",
+    "likes": 663
+  },
+  {
+    "id": 33,
+    "user_id": 5,
+    "movie_id": 10214,
+    "rating": 1,
+    "content": "It’s the kind of film that makes you check the runtime every five minutes, just to suffer the realization you’re only ten minutes in. Time slowed down. Painfully.",
+    "likes": 504
+  },
+  {
+    "id": 34,
+    "user_id": 3,
+    "movie_id": 10214,
+    "rating": 2,
+    "content": "If a group of cats wrote a screenplay while fighting over a laser pointer, it would still be more coherent than this. A true test of patience.",
+    "likes": 211
+  },
+  {
+    "id": 35,
+    "user_id": 10,
+    "movie_id": 10214,
+    "rating": 1,
+    "content": "You know a movie’s bad when your snacks are the only thing keeping you invested. I finished the popcorn in 15 minutes, and the movie never recovered.",
+    "likes": 738
+  },
+  {
+    "id": 36,
+    "user_id": 1,
+    "movie_id": 10214,
+    "rating": 2,
+    "content": "A baffling mix of nothing happening and too much happening all at once. Like watching a blender full of tropes and clichés with the lid off.",
+    "likes": 327
+  },
+  {
+    "id": 37,
+    "user_id": 9,
+    "movie_id": 218043,
+    "rating": 2,
+    "content": "The movie opened strong by which I mean I was still awake. But by the halfway mark I was rooting for the credits to roll. Brutal.",
+    "likes": 479
+  },
+  {
+    "id": 38,
+    "user_id": 2,
+    "movie_id": 218043,
+    "rating": 3,
+    "content": "You know it's bad when you start analyzing the background props just to stay entertained. I noticed a typo on a newspaper and that was the highlight.",
+    "likes": 115
+  },
+  {
+    "id": 39,
+    "user_id": 8,
+    "movie_id": 218043,
+    "rating": 2,
+    "content": "There’s bad, then there’s this movie. I’m not even mad it’s impressive how committed it is to mediocrity. Like a masterclass in creative surrender.",
+    "likes": 834
+  },
+  {
+    "id": 40,
+    "user_id": 7,
+    "movie_id": 218043,
+    "rating": 1,
+    "content": "It felt like the movie was punishing me for something. Every minute stretched into an eternity. I left the theater older, sadder, and slightly dehydrated.",
+    "likes": 293
+  },
+  {
+    "id": 41,
+    "user_id": 6,
+    "movie_id": 351460,
+    "rating": 2,
+    "content": "This movie had all the suspense of a soggy paper towel. I kept waiting for something anything to happen, but it was like watching a slideshow of disappointment.",
+    "likes": 321
+  },
+  {
+    "id": 42,
+    "user_id": 4,
+    "movie_id": 351460,
+    "rating": 1,
+    "content": "It felt like a group project where nobody cared and everyone just guessed what a movie is supposed to be. The result? An absolute dumpster fire with a soundtrack.",
+    "likes": 488
+  },
+  {
+    "id": 43,
+    "user_id": 5,
+    "movie_id": 351460,
+    "rating": 2,
+    "content": "The only thing scary about this film is how it got funded. I’ve seen more character development in microwave instructions.",
+    "likes": 194
+  },
+  {
+    "id": 44,
+    "user_id": 2,
+    "movie_id": 351460,
+    "rating": 1,
+    "content": "This wasn’t a movie. This was a cautionary tale about what happens when no one says 'maybe we shouldn't.' Truly baffling from start to finish.",
+    "likes": 850
+  },
+  {
+    "id": 45,
+    "user_id": 1,
+    "movie_id": 439015,
+    "rating": 1,
+    "content": "The plot holes are so massive I’m surprised no one fell in and disappeared. It's like the script was written by playing Mad Libs with a blender.",
+    "likes": 677
+  },
+  {
+    "id": 46,
+    "user_id": 7,
+    "movie_id": 439015,
+    "rating": 2,
+    "content": "It started like it had promise, then immediately nose-dived into a pit of poor choices and bad dialogue. A cinematic black hole of entertainment.",
+    "likes": 243
+  },
+  {
+    "id": 47,
+    "user_id": 10,
+    "movie_id": 439015,
+    "rating": 1,
+    "content": "If awkward pacing and confusing motives were a genre, this movie would be the gold standard. I laughed once, but it was a cry for help.",
+    "likes": 389
+  },
+  {
+    "id": 48,
+    "user_id": 3,
+    "movie_id": 439015,
+    "rating": 2,
+    "content": "The movie tries to be deep, but ends up drowning in its own shallow ideas. I’ve had more compelling conversations with a vending machine.",
+    "likes": 169
+  },
+  {
+    "id": 49,
+    "user_id": 8,
+    "movie_id": 9708,
+    "rating": 2,
+    "content": "A two-hour long shrug. Nobody looks like they want to be in this film, including me, the viewer. It’s not just bad, it’s aggressively bland.",
+    "likes": 561
+  },
+  {
+    "id": 50,
+    "user_id": 9,
+    "movie_id": 9708,
+    "rating": 1,
+    "content": "Honestly, the best part was the credits because they meant it was over. This movie should be studied as a psychological endurance test.",
+    "likes": 317
+  },
+  {
+    "id": 51,
+    "user_id": 5,
+    "movie_id": 9708,
+    "rating": 2,
+    "content": "This movie has the pacing of a snail on sedatives. Scenes drag on like a group chat that refuses to end. Avoid unless you need a nap.",
+    "likes": 174
+  },
+  {
+    "id": 52,
+    "user_id": 2,
+    "movie_id": 9708,
+    "rating": 1,
+    "content": "It's one of those films where the title is the most creative part. The rest is just a confusing, slow spiral into cinematic despair.",
+    "likes": 829
+  },
+  {
+    "id": 53,
+    "user_id": 6,
+    "movie_id": 71668,
+    "rating": 1,
+    "content": "The film tries to make bold statements but can’t even form a coherent sentence. It’s like watching someone lose an argument to themselves for two hours.",
+    "likes": 295
+  },
+  {
+    "id": 54,
+    "user_id": 4,
+    "movie_id": 71668,
+    "rating": 2,
+    "content": "This wasn’t a rollercoaster. It was an elevator stuck between floors claustrophobic, annoying, and entirely pointless. A spectacular waste of cast and crew.",
+    "likes": 192
+  },
+  {
+    "id": 55,
+    "user_id": 3,
+    "movie_id": 71668,
+    "rating": 2,
+    "content": "A cinematic vacuum loud, directionless, and it somehow sucked all the joy out of the room. Nothing sticks, not even the jokes.",
+    "likes": 447
+  },
+  {
+    "id": 56,
+    "user_id": 1,
+    "movie_id": 71668,
+    "rating": 1,
+    "content": "The only thing more lifeless than this plot was the cast’s delivery. It felt like watching cardboard act out an email thread.",
+    "likes": 672
+  },
+  {
+    "id": 57,
+    "user_id": 8,
+    "movie_id": 40264,
+    "rating": 2,
+    "content": "It’s not often you watch something that’s both overcomplicated and boring, but here we are. Like reading a textbook printed in Comic Sans.",
+    "likes": 385
+  },
+  {
+    "id": 58,
+    "user_id": 7,
+    "movie_id": 40264,
+    "rating": 3,
+    "content": "It’s almost impressive how every interesting idea gets buried under clichés. I kept hoping for a twist, but the biggest twist was I didn’t walk out.",
+    "likes": 127
+  },
+  {
+    "id": 59,
+    "user_id": 10,
+    "movie_id": 40264,
+    "rating": 1,
+    "content": "From the first minute, you know exactly where it’s going and it still manages to disappoint. Predictable, plodding, and painfully dull.",
+    "likes": 701
+  },
+  {
+    "id": 60,
+    "user_id": 9,
+    "movie_id": 40264,
+    "rating": 2,
+    "content": "The movie set up a mystery, then forgot what it was doing. Like being promised cake and handed a wet napkin. Just... why?",
+    "likes": 510
+  },
+  {
+    "id": 61,
+    "user_id": 10,
+    "movie_id": 415,
+    "rating": 2,
+    "content": "This film has the energy of a reheated dinner technically complete, but limp and joyless. I've seen more dramatic tension in a group project status update.",
+    "likes": 134
+  },
+  {
+    "id": 62,
+    "user_id": 6,
+    "movie_id": 415,
+    "rating": 1,
+    "content": "If boredom had a director, this would be their magnum opus. It's two hours of plotless wandering and actors who seem just as confused as I was.",
+    "likes": 902
+  },
+  {
+    "id": 63,
+    "user_id": 3,
+    "movie_id": 415,
+    "rating": 1,
+    "content": "Every scene feels like the movie paused to remember what it was doing. The pacing? Glacial. The story? Missing. The experience? Unforgettable in the worst way.",
+    "likes": 484
+  },
+  {
+    "id": 64,
+    "user_id": 1,
+    "movie_id": 415,
+    "rating": 2,
+    "content": "This wasn't a story it was an extended sigh. Characters wandered through scenes like they were lost in a mall. It ended, mercifully, but not soon enough.",
+    "likes": 392
+  },
+  {
+    "id": 65,
+    "user_id": 5,
+    "movie_id": 71880,
+    "rating": 1,
+    "content": "This movie made me question how I spend my time. I've accidentally watched livestreams of paint drying that had more narrative momentum than this.",
+    "likes": 553
+  },
+  {
+    "id": 66,
+    "user_id": 9,
+    "movie_id": 71880,
+    "rating": 1,
+    "content": "It’s the cinematic equivalent of trying to assemble IKEA furniture with no instructions and missing half the parts. And somehow it still manages to wobble.",
+    "likes": 639
+  },
+  {
+    "id": 67,
+    "user_id": 7,
+    "movie_id": 71880,
+    "rating": 2,
+    "content": "The script sounds like it was written by predictive text. Characters say things no human would say, in situations no human would be in. Hilariously bad.",
+    "likes": 178
+  },
+  {
+    "id": 68,
+    "user_id": 4,
+    "movie_id": 71880,
+    "rating": 2,
+    "content": "The film feels like it’s punishing you for paying attention. The more you focus, the less sense it makes. A surreal exercise in confusion.",
+    "likes": 291
+  },
+  {
+    "id": 69,
+    "user_id": 2,
+    "movie_id": 166424,
+    "rating": 1,
+    "content": "This wasn’t so much a movie as a very expensive mistake. The plot crawls like a wounded raccoon and ends just as unceremoniously. Avoid at all costs.",
+    "likes": 884
+  },
+  {
+    "id": 70,
+    "user_id": 6,
+    "movie_id": 166424,
+    "rating": 2,
+    "content": "Imagine trying to retell a dream you barely remember while being attacked by clichés that’s this film. A total narrative disaster dressed in expensive lighting.",
+    "likes": 361
+  },
+  {
+    "id": 71,
+    "user_id": 8,
+    "movie_id": 166424,
+    "rating": 2,
+    "content": "Not even bad in an entertaining way just bad. It’s like the director filmed a rehearsal and thought, ‘Yeah, good enough.’ Spoiler: It wasn’t.",
+    "likes": 105
+  },
+  {
+    "id": 72,
+    "user_id": 10,
+    "movie_id": 166424,
+    "rating": 1,
+    "content": "I can’t decide what was worse the acting or the dialogue. It's like someone fed a soap opera to a paper shredder and filmed what fell out.",
+    "likes": 594
+  },
+  {
+    "id": 73,
+    "user_id": 1,
+    "movie_id": 472838,
+    "rating": 1,
+    "content": "This movie doesn't just miss the mark it misses the whole target range. A nonsensical parade of awkward cuts, weird tone shifts, and confused characters.",
+    "likes": 452
+  },
+  {
+    "id": 74,
+    "user_id": 3,
     "movie_id": 472838,
     "rating": 2,
-    "content": "Please don't waste your time on this. So many better things you could be doing. I regret every second.",
+    "content": "The film throws plot twists at you like spaghetti at a wall nothing sticks, everything’s a mess. Not even bad enough to be memorable.",
+    "likes": 334
+  },
+  {
+    "id": 75,
+    "user_id": 5,
+    "movie_id": 472838,
+    "rating": 2,
+    "content": "A chaotic blend of nothingness. Characters arrive, say things that make no sense, then disappear like plot ghosts. It’s impressive how incoherent this is.",
+    "likes": 183
+  },
+  {
+    "id": 76,
+    "user_id": 7,
+    "movie_id": 472838,
+    "rating": 1,
+    "content": "I don’t know what they were trying to say, but they said it very badly and for way too long. It’s like watching someone read a confused tweet thread out loud.",
+    "likes": 790
+  },
+  {
+    "id": 77,
+    "user_id": 8,
+    "movie_id": 205321,
+    "rating": 2,
+    "content": "A stunning achievement in misdirection. Just when you think it’s going somewhere, it swerves into nonsense and stays there. It's like watching GPS fail in real time.",
     "likes": 246
+  },
+  {
+    "id": 78,
+    "user_id": 2,
+    "movie_id": 205321,
+    "rating": 1,
+    "content": "Not sure what the worst part was the acting, the editing, or the fact that I watched the whole thing hoping it would get better. It did not.",
+    "likes": 898
+  },
+  {
+    "id": 79,
+    "user_id": 9,
+    "movie_id": 205321,
+    "rating": 2,
+    "content": "Like a failed school play with a big budget. Everyone involved looks embarrassed, and now I share that feeling. Cinematic misfire of the year.",
+    "likes": 337
+  },
+  {
+    "id": 80,
+    "user_id": 10,
+    "movie_id": 205321,
+    "rating": 1,
+    "content": "This film should come with a free therapist. I laughed, I cried, I regretted every minute. Truly an emotional rollercoaster of disappointment.",
+    "likes": 742
   }
 ]
