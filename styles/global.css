@@ -393,15 +393,10 @@ footer {
 
 /*About*/
 .about-text {
-  flex-direction: column;
-}
-
-.about-text {
-  color: var(--eggshel);
+  color: var(--eggshell);
   padding: 1.25rem;
   text-align: center;
-  margin-top: 10rem;
-  margin-bottom: 30rem;
+  margin: 10rem 1.5rem 30rem 1.5rem;
 }
 
 /*Review Textbox*/
