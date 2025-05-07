@@ -7,19 +7,26 @@ export function NavbarComponent() {
   const navbarComponent = document.createElement("div");
   navbarComponent.className = "different-navbar-components";
   navbarComponent.innerHTML = `  
-    <nav class="navbar">
-      <a href="index.html">
+        <nav class="navbar">
+      <a href="/index.html">
         <img
           src="/assets/icons/movie-roast-darkbg.svg"
           alt="Movie-roast-logo"
           class="logo"
         />
       </a>
-      <a href="/pages/reviews/reviews.html">Reviews</a>
-      <a href="/pages/movies/movies.html">Movies</a>
-      <a href="/about.html">About</a>
-      <input id="searchbar" type="text" placeholder="Search..." />
+      <div class="navbar-center-container">
+        <a href="/pages/reviews/reviews.html">Reviews</a>
+        <a href="/pages/movies/movies.html">Movies</a>
+        <a href="/about.html">About</a>
+        <input id="searchbar" type="text" placeholder="Search..." />
+      </div>
       <div id="profile-pic-container">
+        <div class="">
+          <a href="/pages/profile/profile.html"
+            ><p id="profile-text">Profile</p></a
+          >
+        </div>
         <a id="profile-icon" href="/pages/profile/profile.html">
           <img
             src="/assets/pictures/profil.jpg"
