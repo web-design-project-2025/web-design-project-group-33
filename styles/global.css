@@ -93,9 +93,8 @@ class="button button--grey"   for grey
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  gap: 1rem;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .navbar-center-container {
@@ -104,7 +103,7 @@ class="button button--grey"   for grey
   justify-content: center;
 }
 
-.logo {
+.navbar .logo {
   height: 5rem;
   border: 0;
   margin-top: -10px;
@@ -119,16 +118,24 @@ class="button button--grey"   for grey
 .navbar p {
   text-decoration: none;
   color: var(--eggshell);
-  margin: 0rem 1.6rem 0rem 1.6rem;
+  margin: 0rem 1.4rem 0rem 1.4rem;
   font-size: 18px;
   font-weight: 600;
   font-family: var(--Grotesk);
 }
 
-@media (min-width: 992px) {
+.navbar > :nth-child(1),
+.navbar p {
+  margin: 0;
+}
+
+@media (max-width: 1060px) {
   .navbar a,
   .navbar p {
-    font-size: 24px;
+    font-size: 16px;
+  }
+  .navbar .logo {
+    width: 100%;
   }
 }
 
@@ -140,7 +147,6 @@ class="button button--grey"   for grey
 #profile-pic-container {
   display: flex;
   align-items: center;
-  gap: 1rem;
 }
 
 #profile-icon img:hover {
@@ -151,10 +157,9 @@ class="button button--grey"   for grey
   background-color: #171415;
   color: var(--eggshell);
   border: 1px solid #131011;
-  width: 20rem;
+  width: 40%;
   border-radius: 1000px;
-
-  height: 1.6rem;
+  height: 1.8rem;
   padding-left: 1rem;
   outline: none;
 }
@@ -338,35 +343,30 @@ footer {
   object-fit: cover;
 }
 
-.overlay-text-cover {
-  position: absolute;
+.cover-text-overlay {
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  top: 26rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
   color: var(--eggshell);
   font-size: 40px;
+  justify-content: center;
+  position: absolute;
+  top: 15rem;
+  padding: 1rem;
 }
 
-.overlay-text-cover > :nth-child(1) {
-  width: 18rem;
-  grid-row: 1 / 3;
-  grid-column: 1 / 2;
-  justify-self: end;
-  align-self: center;
+.cover-text-overlay img {
+  width: 250px;
 }
 
-.overlay-text-cover > :nth-child(2) {
-  align-self: end;
-  margin: 0;
-}
-
-.overlay-text-cover > :nth-child(3) {
-  align-self: start;
-  margin: 0;
+@media screen and (max-width: 768px) {
+  .homepage-cover-photo {
+    display: none;
+  }
+  .cover-text-overlay {
+    display: none;
+  }
 }
 
 .homepage-buttom-section {

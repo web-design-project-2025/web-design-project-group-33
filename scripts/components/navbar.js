@@ -22,10 +22,7 @@ export function NavbarComponent() {
         <input id="searchbar" type="text" placeholder="Search..." />
       </div>
       <div id="profile-pic-container">
-        <div class="">
-          <a href="/pages/profile/profile.html"
-            ><p id="profile-text">Profile</p></a
-          >
+        <div>
         </div>
         <a id="profile-icon" href="/pages/profile/profile.html">
           <img
