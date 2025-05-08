@@ -694,9 +694,16 @@ footer {
   .review-content {
     width: 80%;
   }
+  .review-content p,
+  .like-comment-share-rating {
+    padding-left: 2.7rem;
+  }
   .divider {
     margin-left: 6.5rem;
     width: 73%;
+  }
+  .rating label {
+    display: none;
   }
 }
 @media (max-width: 600px) {
@@ -706,10 +713,6 @@ footer {
   .divider {
     margin-left: 9.5rem;
     width: 60%;
-  }
-  .review-content p,
-  .like-comment-share-rating {
-    padding-left: 2.7rem;
   }
 }
 /* Review Comment */
@@ -727,6 +730,16 @@ footer {
   padding-bottom: 1rem;
   font-weight: 450;
   border-bottom: var(--tertiary-grey) 1px solid;
+}
+@media screen and (max-width: 768px) {
+  .review-comment {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .review-comment {
+    width: 65%;
+  }
 }
 
 .review-comment .user-container {
@@ -746,6 +759,10 @@ footer {
 .review-comment .content-container {
   white-space: normal;
   overflow-wrap: break-word;
+}
+.review-comment .content {
+  font-weight: 300;
+  line-height: 22px;
 }
 
 /* reviews page */
@@ -965,8 +982,6 @@ footer {
 .review-section {
   display: flex;
   flex-direction: row;
-  margin-top: 15rem;
-  margin-bottom: 10.5rem;
 }
 
 .movie-page .article-content {
@@ -988,6 +1003,9 @@ footer {
 .movie-page .top-reviews .container {
   margin: 1rem;
   margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .movie-page .review-component-container {
@@ -1107,4 +1125,62 @@ footer {
   .movie-page .rating-circles-text-container-mobile {
     display: none;
   }
+}
+
+/* review page */
+.page-content#review-page .review-section {
+  display: flex;
+  margin-top: 3rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+.page-content#review-page .section-title {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.page-content#review-page .divider {
+  display: none;
+}
+
+.comments-container {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 700px;
+}
+
+.comment-input {
+  background-color: #171415;
+  color: #d9d9d9;
+  border: none;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  width: 100%;
+}
+.comment-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--tertiary-grey);
+}
+
+.comment-button {
+  background-color: var(--red);
+  color: var(--eggshell);
+  border: none;
+  border-radius: 100px;
+  padding: 1rem 2rem 1rem 2rem;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
 }
