@@ -15,6 +15,8 @@ const director = document.querySelector(".director");
 const stars = document.querySelector(".stars");
 const description = document.querySelector(".description");
 
+document.title = `${movie.title} (${movie.releaseDate.match(/^\d{4}/)[0]})`;
+
 poster.src = movie.poster;
 title.innerText = movie.title;
 director.innerText = movie.director;
