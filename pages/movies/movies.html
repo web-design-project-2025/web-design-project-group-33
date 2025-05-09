@@ -44,7 +44,9 @@
       <section id="movies-trending" class="movies-section">
         <div class="section-header">
           <h2 class="section-title">Trending Movies</h2>
-          <a href="" class="view-more">View more...</a>
+          <a href="movies.html?sort=trending" id="trending" class="view-more"
+            >View more...</a
+          >
         </div>
         <div id="trending" class="movies-container"></div>
       </section>
@@ -52,9 +54,26 @@
       <section id="movies-roasted" class="movies-section">
         <div class="section-header">
           <h2 class="section-title">Most Roasted Movies</h2>
-          <a href="" class="view-more">View more...</a>
+          <a href="movies.html?sort=top" id="top" class="view-more"
+            >View more...</a
+          >
         </div>
         <div id="top" class="movies-container"></div>
+      </section>
+
+      <section id="sorted" class="movies-section">
+        <div class="section-header">
+          <h2 class="section-title">Title</h2>
+          <div class="sort-button">
+            <p>Sort By</p>
+            <div class="sort-menu">
+              <p id="newest" class="option">Newest</p>
+              <p id="trending" class="option">Trending</p>
+              <p id="top" class="option">Most Roasted</p>
+            </div>
+          </div>
+        </div>
+        <div id="sorted" class="movies-container"></div>
       </section>
     </div>
 
