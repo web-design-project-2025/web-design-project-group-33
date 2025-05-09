@@ -8,17 +8,18 @@ export function NavbarComponent() {
   navbarComponent.className = "different-navbar-components";
   navbarComponent.innerHTML = `  
     <nav class="navbar">
-      <a href="index.html">
+      <a href="/index.html">
         <img
           src="/assets/icons/movie-roast-darkbg.svg"
           alt="Movie-roast-logo"
           class="logo"
         />
       </a>
+      <div>
       <a href="/pages/reviews/reviews.html">Reviews</a>
       <a href="/pages/movies/movies.html">Movies</a>
-      <a href="/about.html">About</a>
       <input id="searchbar" type="text" placeholder="Search..." />
+      </div>
       <div id="profile-pic-container">
         <a id="profile-icon" href="/pages/profile/profile.html">
           <img
