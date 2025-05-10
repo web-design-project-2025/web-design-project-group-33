@@ -91,10 +91,9 @@ class="button button--grey"   for grey
   z-index: 1000;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding: 0 2rem;
+  gap: 2rem;
 }
 
 .navbar .logo {
@@ -112,14 +111,12 @@ class="button button--grey"   for grey
 .navbar p {
   text-decoration: none;
   color: var(--eggshell);
-  margin: 0rem 1.4rem 0rem 1.4rem;
   font-size: 20px;
   font-weight: 600;
   font-family: var(--Grotesk);
 }
 
-.navbar > :nth-child(1),
-.navbar p {
+.navbar img {
   margin: 0;
 }
 
@@ -128,36 +125,43 @@ class="button button--grey"   for grey
   color: #a39fa2;
 }
 
-#profile-pic-container {
-  display: flex;
-  align-items: center;
-  margin-left: 6vw;
+#profile-icon {
+  margin-left: 8rem;
+}
+
+@media (max-width: 1115px) {
+  #profile-icon {
+    margin-left: 0;
+  }
 }
 
 #profile-icon img:hover {
   scale: 1.1;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.searchbar-wrapper {
+  flex: 1;
+  max-width: 20rem;
+}
+
 #searchbar {
   background-color: #171415;
   color: var(--eggshell);
   border: 1px solid #131011;
-  width: 20rem;
+  width: 100%;
   border-radius: 1000px;
   height: 1.8rem;
-  padding-left: 1rem;
-  margin-left: 1.2rem;
   outline: none;
   font-size: 16px;
-}
-
-@media (max-width: 1015px) {
-  #profile-pic-container {
-    margin-left: 0;
-  }
-  #searchbar {
-    width: 9rem;
-  }
+  padding-left: 1rem;
 }
 
 /*NAV-Mobile*/
