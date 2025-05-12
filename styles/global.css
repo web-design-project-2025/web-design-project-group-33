@@ -90,11 +90,12 @@ class="button button--grey"   for grey
   max-width: 24rem;
   background-color: #171415;
   position: absolute;
-  
+  pointer-events: none;
 }
 
 .search-menu.open {
   visibility: visible;
+  pointer-events: all;
 }
 
 .search-menu ul#movies {
