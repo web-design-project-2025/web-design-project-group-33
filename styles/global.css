@@ -831,6 +831,17 @@ footer {
   margin-bottom: 4.5rem;
 }
 
+.movies-section.hidden {
+  display: none;
+}
+
+.movies-section#sorted {
+  display: none;
+}
+.movies-section#sorted.shown {
+  display: block;
+}
+
 .section-header {
   background: var(--red);
   display: flex;
@@ -897,6 +908,11 @@ footer {
     flex-wrap: nowrap;
     justify-content: flex-start;
   }
+}
+
+.movies-container#sorted {
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media (min-width: 992px) {
