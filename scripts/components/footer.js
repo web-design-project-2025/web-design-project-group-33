@@ -34,18 +34,18 @@ export function FooterComponent() {
         </div>
         <ul class="footer-ul">
           <li><h3>Navigation</h3></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="pages/reviews/reviews.html">Reviews</a></li>
-          <li><a href="pages/movies/movies.html">Movies</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/reviews/reviews.html">Reviews</a></li>
+          <li><a href="/pages/movies/movies.html">Movies</a></li>
+          <li><a href="/about.html">About</a></li>
         </ul>
         <ul class="footer-ul">
           <li><h3>Socials</h3></li>
-          <li><a href="index.html">Instagram</a></li>
-          <li><a href="index.html">FaceBook</a></li>
-          <li><a href="index.html">Twitter</a></li>
-          <li><a href="index.html">TikTok</a></li>
-          <li><a href="index.html">YouTube</a></li>
+          <li><a href="/index.html">Instagram</a></li>
+          <li><a href="/index.html">FaceBook</a></li>
+          <li><a href="/index.html">Twitter</a></li>
+          <li><a href="/index.html">TikTok</a></li>
+          <li><a href="/index.html">YouTube</a></li>
         </ul>
         <ul class="footer-ul">
           <li><h3>Contact</h3></li>
