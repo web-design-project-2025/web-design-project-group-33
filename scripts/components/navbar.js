@@ -20,9 +20,12 @@ export async function NavbarComponent() {
       <div class="nav-links">
         <a href="/pages/reviews/reviews.html">Reviews</a>
         <a href="/pages/movies/movies.html">Movies</a>
-        <div class="searchbar-wrapper">
+        <form class="searchbar-wrapper">
           <input id="searchbar" type="text" placeholder="Search..." value="" />
-        </div>
+          <div class="search-menu">
+          <ul id="movies"></ul>
+          </div>
+        </form>
       </div>
       <a id="profile-icon" href="/pages/profile/profile.html">
         <img
@@ -80,35 +83,54 @@ export async function NavbarComponent() {
     }
   });
 
-  const movies = await getMovies();
-  const reviews = await fetch("/data/reviews.json")
-    .then((res) => res.json())
-    .then((data) => data);
+  navbarComponent.addEventListener("click", (e) => {
+    
+    const movie = e.target.closest(".search-menu ul#movies li");
+    if (movie) {
+      window.location.assign(`/pages/movies/movie.html?id=${movie.id}`);
+    }
+  });
 
-  console.log(movies);
+  function MovieResult(movie) {
+    const item = document.createElement("li");
+    item.id = movie.id;
+    item.innerHTML = `
+    <img src="${movie.poster}"/>
+    <p>${movie.title}</p>
+    `;
+    return item;
+  }
+
+  const movies = await getMovies();
+
   const searchbar = navbarComponent.querySelector("#searchbar");
-  console.log(searchbar.value);
   searchbar.addEventListener("input", (e) => {
+    const movieResults = navbarComponent.querySelector(
+      ".search-menu ul#movies"
+    );
+    movieResults.innerHTML = "";
     const value = searchbar.value.toLowerCase();
-    console.log(value.length);
     if (value.length >= 3) {
       movies.forEach((movie) => {
         const title = movie.title.toLowerCase();
         if (title.includes(value)) {
-          console.log(title);
+          movieResults.appendChild(MovieResult(movie));
         }
-      });
-      reviews.forEach((review) => {
-        movies.forEach((movie) => {
-          if (review.movie_id === movie.id) {
-            const title = movie.title.toLowerCase();
-            if (title.includes(value)) {
-              console.log(review.content);
-            }
-          }
-        });
       });
     }
   });
+
+  const searchMenu = navbarComponent.querySelector(".search-menu");
+
+  searchbar.addEventListener("click", (e) => {
+    searchMenu.classList.add("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!searchMenu.contains(e.target) && !searchbar.contains(e.target)) {
+      searchMenu.classList.remove("open");
+    }
+  });
+
   return navbarComponent;
 }
