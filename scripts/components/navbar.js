@@ -1,9 +1,11 @@
+import { getMovies } from "../api/movieData.js";
+
 /* Use these in the HTML
 <script type="module" src="/scripts/main.js"></script>
 <nav id="navbar-component"></nav>
 */
 
-export function NavbarComponent() {
+export async function NavbarComponent() {
   const navbarComponent = document.createElement("div");
   navbarComponent.className = "different-navbar-components";
   navbarComponent.innerHTML = `  
@@ -18,9 +20,12 @@ export function NavbarComponent() {
       <div class="nav-links">
         <a href="/pages/reviews/reviews.html">Reviews</a>
         <a href="/pages/movies/movies.html">Movies</a>
-        <div class="searchbar-wrapper">
-          <input id="searchbar" type="text" placeholder="Search..." />
-        </div>
+        <form class="searchbar-wrapper">
+          <input id="searchbar" type="text" placeholder="Search..." value="" />
+          <div class="search-menu">
+          <ul id="movies"></ul>
+          </div>
+        </form>
       </div>
       <a id="profile-icon" href="/pages/profile/profile.html">
         <img
@@ -75,6 +80,55 @@ export function NavbarComponent() {
   document.addEventListener("click", (e) => {
     if (!mobileMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
       mobileMenu.classList.remove("open");
+    }
+  });
+
+  navbarComponent.addEventListener("click", (e) => {
+    
+    const movie = e.target.closest(".search-menu ul#movies li");
+    if (movie) {
+      window.location.assign(`/pages/movies/movie.html?id=${movie.id}`);
+    }
+  });
+
+  function MovieResult(movie) {
+    const item = document.createElement("li");
+    item.id = movie.id;
+    item.innerHTML = `
+    <img src="${movie.poster}"/>
+    <p>${movie.title}</p>
+    `;
+    return item;
+  }
+
+  const movies = await getMovies();
+
+  const searchbar = navbarComponent.querySelector("#searchbar");
+  searchbar.addEventListener("input", (e) => {
+    const movieResults = navbarComponent.querySelector(
+      ".search-menu ul#movies"
+    );
+    movieResults.innerHTML = "";
+    const value = searchbar.value.toLowerCase();
+    if (value.length >= 3) {
+      movies.forEach((movie) => {
+        const title = movie.title.toLowerCase();
+        if (title.includes(value)) {
+          movieResults.appendChild(MovieResult(movie));
+        }
+      });
+    }
+  });
+
+  const searchMenu = navbarComponent.querySelector(".search-menu");
+
+  searchbar.addEventListener("click", (e) => {
+    searchMenu.classList.add("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!searchMenu.contains(e.target) && !searchbar.contains(e.target)) {
+      searchMenu.classList.remove("open");
     }
   });
 
