@@ -922,6 +922,11 @@ footer {
   }
 }
 
+.movies-container#sorted {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 @media (min-width: 992px) {
   .page-content {
     margin-bottom: 3rem;
