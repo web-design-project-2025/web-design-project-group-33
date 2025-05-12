@@ -129,16 +129,6 @@ class="button button--grey"   for grey
   color: #a39fa2;
 }
 
-#profile-icon {
-  margin-left: 8rem;
-}
-
-@media (max-width: 1115px) {
-  #profile-icon {
-    margin-left: 0;
-  }
-}
-
 #profile-icon img:hover {
   scale: 1.1;
 }
@@ -148,12 +138,11 @@ class="button button--grey"   for grey
   align-items: center;
   gap: 2rem;
   flex: 1;
-  justify-content: center;
 }
 
 .searchbar-wrapper {
   flex: 1;
-  max-width: 20rem;
+  max-width: 24rem;
 }
 
 #searchbar {
