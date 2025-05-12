@@ -1,9 +1,11 @@
+import { getMovies } from "../api/movieData.js";
+
 /* Use these in the HTML
 <script type="module" src="/scripts/main.js"></script>
 <nav id="navbar-component"></nav>
 */
 
-export function NavbarComponent() {
+export async function NavbarComponent() {
   const navbarComponent = document.createElement("div");
   navbarComponent.className = "different-navbar-components";
   navbarComponent.innerHTML = `  
@@ -19,7 +21,7 @@ export function NavbarComponent() {
         <a href="/pages/reviews/reviews.html">Reviews</a>
         <a href="/pages/movies/movies.html">Movies</a>
         <div class="searchbar-wrapper">
-          <input id="searchbar" type="text" placeholder="Search..." />
+          <input id="searchbar" type="text" placeholder="Search..." value="" />
         </div>
       </div>
       <a id="profile-icon" href="/pages/profile/profile.html">
@@ -78,5 +80,35 @@ export function NavbarComponent() {
     }
   });
 
+  const movies = await getMovies();
+  const reviews = await fetch("/data/reviews.json")
+    .then((res) => res.json())
+    .then((data) => data);
+
+  console.log(movies);
+  const searchbar = navbarComponent.querySelector("#searchbar");
+  console.log(searchbar.value);
+  searchbar.addEventListener("input", (e) => {
+    const value = searchbar.value.toLowerCase();
+    console.log(value.length);
+    if (value.length >= 3) {
+      movies.forEach((movie) => {
+        const title = movie.title.toLowerCase();
+        if (title.includes(value)) {
+          console.log(title);
+        }
+      });
+      reviews.forEach((review) => {
+        movies.forEach((movie) => {
+          if (review.movie_id === movie.id) {
+            const title = movie.title.toLowerCase();
+            if (title.includes(value)) {
+              console.log(review.content);
+            }
+          }
+        });
+      });
+    }
+  });
   return navbarComponent;
 }
