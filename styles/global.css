@@ -361,14 +361,14 @@ footer {
     grid-row: 1;
     margin-right: 0;
   }
-  .footer-container-links > :nth-child(2) {
+  .footer-container-links > :nth-child(4) {
     display: none;
   }
-  .footer-container-links > :nth-child(3) {
-    padding-right: 2.5rem;
-  }
   footer {
-    padding: 2rem 0rem 2rem 2rem;
+    padding: 2rem 0rem 6rem 2rem;
+  }
+  .footer-container-logos .footer-text {
+    display: none;
   }
 }
 
@@ -1246,7 +1246,7 @@ footer {
 }
 
 .blog-wrapper h1 {
-  font-size: 28px;-
+  font-size: 28px;
 }
 
 .blog-wrapper .written-by-date {
