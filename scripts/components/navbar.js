@@ -20,6 +20,7 @@ export async function NavbarComponent() {
       <div class="nav-links">
         <a href="/pages/reviews/reviews.html">Reviews</a>
         <a href="/pages/movies/movies.html">Movies</a>
+        <a href="/pages/blog/blog.html">Blog</a>
         <form class="searchbar-wrapper">
           <input id="searchbar" type="text" placeholder="Search..." value="" />
           <div class="search-menu">
@@ -64,7 +65,7 @@ export async function NavbarComponent() {
       <div class="links">
         <a href="/pages/reviews/reviews.html">Reviews</a>
         <a href="/pages/movies/movies.html">Movies</a>
-        <a href="/about.html">About</a>
+        <a href="/pages/blog/blog.html">Blog</a>
         <a href="/pages/profile/profile.html">Profile</a>
       </div>
     </div>
@@ -84,7 +85,6 @@ export async function NavbarComponent() {
   });
 
   navbarComponent.addEventListener("click", (e) => {
-    
     const movie = e.target.closest(".search-menu ul#movies li");
     if (movie) {
       window.location.assign(`/pages/movies/movie.html?id=${movie.id}`);

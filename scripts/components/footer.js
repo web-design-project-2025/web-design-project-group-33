@@ -37,6 +37,7 @@ export function FooterComponent() {
           <li><a href="/index.html">Home</a></li>
           <li><a href="/pages/reviews/reviews.html">Reviews</a></li>
           <li><a href="/pages/movies/movies.html">Movies</a></li>
+          <li><a href="/pages/blog/blog.html">Blog</a></li>
           <li><a href="/about.html">About</a></li>
         </ul>
         <ul class="footer-ul">

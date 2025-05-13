@@ -46,7 +46,8 @@ a {
 
 p,
 li,
-small {
+small,
+figcaption {
   font-family: var(--Grotesk);
   font-weight: 500;
   font-style: normal;
@@ -104,7 +105,6 @@ class="button button--grey"   for grey
   display: flex;
   list-style: none;
   padding: 0rem;
-  
 }
 
 .search-menu ul#movies li {
@@ -140,7 +140,7 @@ class="button button--grey"   for grey
   flex-direction: row;
   align-items: center;
   padding: 0 2rem;
-  gap: 2rem;
+  gap: 0.9rem;
 }
 
 .navbar .logo {
@@ -179,7 +179,7 @@ class="button button--grey"   for grey
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 0.8rem;
   flex: 1;
 }
 
@@ -191,7 +191,7 @@ class="button button--grey"   for grey
 #searchbar {
   background-color: #171415;
   color: var(--eggshell);
-  border: 1px solid #131011;
+  border: 2px solid #131011;
   width: 100%;
   border-radius: 1000px;
   height: 1.8rem;
@@ -1229,4 +1229,72 @@ footer {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
+}
+
+/* BLOG */
+
+.blog-wrapper {
+  color: var(--white);
+  margin: 2rem 0 7rem 0;
+
+  justify-items: center;
+}
+
+.blog-wrapper article {
+  padding: 1.25rem;
+  width: 38rem;
+}
+
+.blog-wrapper h1 {
+  font-size: 28px;-
+}
+
+.blog-wrapper .written-by-date {
+  font-size: 13px;
+  margin-bottom: 2.4rem;
+}
+
+.blog-wrapper .written-by-date span {
+  font-weight: 600;
+}
+
+.blog-wrapper .written-by-date time {
+  margin-left: 2rem;
+}
+
+.blog-wrapper h2 {
+  font-size: 22px;
+  margin-top: 2rem;
+}
+
+.blog-wrapper p {
+  margin-top: 1rem;
+  font-size: 20px;
+  line-height: 29px;
+}
+
+.blog-wrapper img {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.blog-wrapper figure {
+  font-size: 14px;
+}
+
+.blog-wrapper figcaption {
+  margin: 0 0 1rem 0;
+  opacity: 50%;
+}
+
+.blog-wrapper .blog-divider {
+  border: solid var(--tertiary-grey) 1px;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 610px) {
+  .blog-wrapper article {
+    width: 100%;
+  }
 }
