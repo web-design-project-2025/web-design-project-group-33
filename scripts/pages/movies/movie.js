@@ -36,7 +36,7 @@ const reviews = await fetch("/data/reviews.json")
   });
 
 reviews.forEach(async (review) => {
-  reviewContainer.appendChild(await ReviewComponent(review));
+  reviewContainer.appendChild(await ReviewComponent(review, movie));
 });
 
 const totalRating = reviews.reduce((sum, review) => sum + review.rating, 0);

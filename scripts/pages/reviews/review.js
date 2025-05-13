@@ -1,3 +1,4 @@
+import { getMovies } from "../../api/movieData.js";
 import { ReviewComment } from "../../components/reviewComment.js";
 import { ReviewComponent as Review } from "../../components/reviewComponent.js";
 
@@ -15,6 +16,11 @@ const review = await fetch("/data/reviews.json")
     return data.find((review) => review.id === reviewId);
   });
 
+const movies = await getMovies();
+const movie = movies.find((movie) => movie.id === review.movie_id);
+
+reviewContainer.appendChild(await Review(review, movie));
+
 const comments = await fetch("/data/comments.json")
   .then((res) => res.json())
   .then((data) => {
@@ -26,8 +32,6 @@ const comments = await fetch("/data/comments.json")
     });
     return arr;
   });
-
-reviewContainer.appendChild(await Review(review));
 
 comments.forEach(async (comment) => {
   commentsContainer.appendChild(await ReviewComment(comment));
