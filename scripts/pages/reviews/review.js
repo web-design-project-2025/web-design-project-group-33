@@ -7,7 +7,7 @@ import { showToast } from "../../main.js";
 const reviewContainer = document.querySelector(".review-container");
 const commentsContainer = document.querySelector(".comments-container");
 const commentForm = document.querySelector(".comment-form");
-const backButton = document.querySelector(".section-title");
+const backButton = document.querySelector(".back-button");
 
 const urlParams = new URLSearchParams(window.location.search);
 const reviewId = parseInt(urlParams.get("id"), 10);
@@ -20,6 +20,9 @@ const review = await fetch("/data/reviews.json")
 
 const movies = await getMovies();
 const movie = movies.find((movie) => movie.id === review.movie_id);
+
+const sectionTitle = document.querySelector(".section-title");
+sectionTitle.innerText = `${movie.title}`;
 
 reviewContainer.appendChild(await Review(review, movie));
 
@@ -36,7 +39,11 @@ comments.forEach(async (comment) => {
 });
 
 backButton.addEventListener("click", (e) => {
-  history.back();
+  if (document.referrer) {
+    window.location.assign(document.referrer);
+  } else {
+    window.location.href = "/";
+  }
 });
 
 commentForm.addEventListener("submit", (e) => {
