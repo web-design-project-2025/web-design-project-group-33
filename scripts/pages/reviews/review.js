@@ -3,6 +3,7 @@ import { ReviewComment } from "../../components/reviewComment.js";
 import { ReviewComponent as Review } from "../../components/reviewComponent.js";
 import { getComments, postComment } from "../../api/commentData.js";
 import { showToast } from "../../main.js";
+import { getReviews } from "../../api/reviewData.js";
 
 const reviewContainer = document.querySelector(".review-container");
 const commentsContainer = document.querySelector(".comments-container");
@@ -12,11 +13,8 @@ const backButton = document.querySelector(".section-title");
 const urlParams = new URLSearchParams(window.location.search);
 const reviewId = parseInt(urlParams.get("id"), 10);
 
-const review = await fetch("/data/reviews.json")
-  .then((res) => res.json())
-  .then((data) => {
-    return data.find((review) => review.id === reviewId);
-  });
+const reviewData = await getReviews();
+const review = reviewData.find((review) => review.id === reviewId);
 
 const movies = await getMovies();
 const movie = movies.find((movie) => movie.id === review.movie_id);

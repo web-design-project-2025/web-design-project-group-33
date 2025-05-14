@@ -1,11 +1,10 @@
 import { ReviewComponent as Review } from "../../components/reviewComponent.js";
 import { getMovies } from "../../api/movieData.js";
+import { getReviews } from "../../api/reviewData.js";
 
 const container = document.querySelector(".review-container");
 
-const reviews = await fetch("/data/reviews.json")
-  .then((res) => res.json())
-  .then((data) => data);
+const reviews = await getReviews();
 
 const movies = await getMovies();
 
