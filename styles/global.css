@@ -1236,8 +1236,10 @@ footer {
 .blog-wrapper {
   color: var(--white);
   margin: 2rem 0 7rem 0;
-
-  justify-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .blog-wrapper article {
@@ -1271,6 +1273,7 @@ footer {
   margin-top: 1rem;
   font-size: 20px;
   line-height: 29px;
+  word-spacing: 1.5px;
 }
 
 .blog-wrapper img {
