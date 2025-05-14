@@ -226,6 +226,10 @@ class="button button--grey"   for grey
   font-weight: 500;
 }
 
+.search-menu ul#movies li:hover {
+  background-color: var(--tertiary-grey);
+}
+
 #navbar-component {
   position: sticky;
   top: 0;
