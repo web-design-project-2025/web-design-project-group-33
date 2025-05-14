@@ -14,15 +14,11 @@ const movie = movies.find((movie) => movie.id === movieId);
 
 const poster = document.querySelector(".poster");
 const title = document.querySelector(".title");
-const director = document.querySelector(".director");
-const stars = document.querySelector(".stars");
 const description = document.querySelector(".description");
 
 document.title = `${movie.title} (${movie.releaseDate.match(/^\d{4}/)[0]})`;
 poster.src = movie.poster;
 title.innerText = movie.title;
-director.innerText = movie.director;
-stars.innerText = movie.stars;
 description.innerText = movie.description;
 
 const releaseDate = document.createElement("span");
@@ -92,3 +88,19 @@ document.addEventListener("click", (e) => {
     document.body.style.overflowY = "auto";
   }
 });
+const totalRating = reviews.reduce((sum, review) => sum + review.rating, 0);
+const avgRating = Math.floor(totalRating / reviews.length);
+
+function applyRating(containerSelector) {
+  const container = document.querySelector(containerSelector);
+
+  const cirlces = container.querySelectorAll(".rate-button");
+  cirlces.forEach((span, index) => {
+    if (index < avgRating) {
+      span.id = "selected";
+    }
+  });
+}
+
+applyRating(".rating-circles-text-container");
+applyRating(".rating-circles-text-container-mobile");

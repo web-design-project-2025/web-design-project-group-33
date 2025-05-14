@@ -149,6 +149,49 @@ class="button button--grey"   for grey
 }
 
 /*NAVBAR*/
+.search-menu {
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  max-width: 24rem;
+  background-color: #171415;
+  position: absolute;
+  pointer-events: none;
+}
+
+.search-menu.open {
+  visibility: visible;
+  pointer-events: all;
+}
+
+.search-menu ul#movies {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  list-style: none;
+  padding: 0rem;
+  
+}
+
+.search-menu ul#movies li {
+  flex-direction: row;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.search-menu ul#movies li img {
+  width: 10%;
+}
+
+.search-menu ul#movies li p {
+  font-size: 16px;
+  font-weight: 500;
+}
 
 #navbar-component {
   position: sticky;
@@ -898,6 +941,17 @@ footer {
   margin-bottom: 4.5rem;
 }
 
+.movies-section.hidden {
+  display: none;
+}
+
+.movies-section#sorted {
+  display: none;
+}
+.movies-section#sorted.shown {
+  display: block;
+}
+
 .section-header {
   background: var(--red);
   display: flex;
@@ -964,6 +1018,11 @@ footer {
     flex-wrap: nowrap;
     justify-content: flex-start;
   }
+}
+
+.movies-container#sorted {
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media (min-width: 992px) {

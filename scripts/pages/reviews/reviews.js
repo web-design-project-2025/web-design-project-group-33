@@ -6,6 +6,23 @@ const reviews = await fetch("/data/reviews.json")
   .then((res) => res.json())
   .then((data) => data);
 
+const urlParams = new URLSearchParams(window.location.search);
+const sort = urlParams.get("sort");
+
+if (!sort) {
+  window.location.assign("reviews.html?sort=trending");
+}
+if (sort === "newest") {
+  // temporary
+  reviews.sort((a, b) => a.likes - b.likes);
+}
+if (sort === "trending") {
+  reviews.sort((a, b) => b.rating - a.rating);
+}
+if (sort === "top") {
+  reviews.sort((a, b) => b.likes - a.likes);
+}
+
 reviews.forEach(async (reviewData) => {
   const review = await Review(reviewData);
   container.appendChild(review);
@@ -16,6 +33,13 @@ const sortMenu = document.querySelector(".sort-menu");
 
 sortButton.addEventListener("click", () => {
   sortMenu.classList.toggle("open");
+});
+
+sortMenu.addEventListener("click", (e) => {
+  console.log(e);
+  if (e.target.id) {
+    window.location.assign(`reviews.html?sort=${e.target.id}`);
+  }
 });
 
 document.addEventListener("click", (e) => {
