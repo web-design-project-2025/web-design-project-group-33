@@ -379,10 +379,6 @@ class="button button--grey"   for grey
 }
 
 @media (max-width: 767px) {
-  .navbar .logo {
-    width: 70%;
-    margin: 0;
-  }
   .navbar .nav-links a,
   .navbar .profile-pic {
     display: none;
@@ -393,7 +389,19 @@ class="button button--grey"   for grey
   .mobile-bottom-navbar {
     display: flex;
   }
-
+  .navbar .logo {
+    width: 70%;
+    margin: 0;
+  }
+  .navbar .logo-hidden {
+    display: none;
+  }
+  .navbar .searchbar {
+    display: none;
+  }
+  .navbar .searchbar-visible {
+    display: flex;
+  }
 }
 
 /* Footer styling */
