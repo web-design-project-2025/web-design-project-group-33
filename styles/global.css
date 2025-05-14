@@ -188,6 +188,9 @@ class="button button--grey"   for grey
   background-color: #171415;
   position: absolute;
   pointer-events: none;
+  border-radius: 10px;
+  margin-top: 2px;
+  border: 1px solid #131011;
 }
 
 .search-menu.open {
