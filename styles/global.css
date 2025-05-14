@@ -59,6 +59,72 @@ textarea {
   font-style: normal;
 }
 
+/* toast */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  background: var(--red);
+  color: var(--eggshell);
+  padding: 1rem 1.5rem;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 550;
+  font-family: var(--Grotesk);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 9999;
+}
+
+.toast#success {
+  background: rgb(8, 170, 8);
+}
+.toast#error {
+  background: var(--red);
+}
+
+.toast.show {
+  animation: toast-in 0.4s ease-in-out forwards;
+}
+
+.toast.hidden {
+  animation: toast-out 0.2s ease-in-out forwards;
+}
+
+@keyframes toast-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(50px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+  }
+
+  75% {
+    transform: translateX(-50%) translateY(0px);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-out {
+  from {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) translateY(50px);
+    opacity: 0;
+  }
+}
+
 /*
 Buttons 
 Use class names:
@@ -232,10 +298,6 @@ class="button button--grey"   for grey
   color: var(--eggshell);
   line-height: 1;
   cursor: pointer;
-}
-
-.hidden {
-  display: none;
 }
 
 .mobile-bottom-navbar .search {

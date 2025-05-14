@@ -2,6 +2,7 @@ import { ReviewComponent } from "../../components/reviewComponent.js";
 import { ReviewTextBox as ReviewForm } from "../../components/reviewTextBox.js";
 import { getMovies } from "../../api/movieData.js";
 import { getReviews, postReview } from "../../api/reviewData.js";
+import { showToast } from "../../main.js";
 
 const reviewContainer = document.getElementById("reviews");
 
@@ -55,7 +56,13 @@ reviewForm.addEventListener("submit", (e) => {
   const content = document.getElementById("reviewContent");
   const rating = document.getElementById("ratingValue");
 
-  if (rating !== "" && content !== "") {
+  if (rating.value === "") {
+    showToast("Rating Empty!", "error");
+  }
+  if (content.value === "") {
+    showToast("Review Empty!", "error");
+  }
+  if (rating.value !== "" && content.value !== "") {
     console.log("reviewposted");
     const user_id = 1;
     const id = reviewData[reviewData.length - 1].id + 1; //bad fix deluxe but we not using uuid soooo...
@@ -69,8 +76,13 @@ reviewForm.addEventListener("submit", (e) => {
     });
     content.value = "";
     rating.value = "";
+    const rateButtons = document.querySelectorAll(
+      ".review-text-box .rate-button"
+    );
+    rateButtons.forEach((b) => (b.id = "deselected"));
     formWrapper.classList.remove("open");
     document.body.style.overflowY = "auto";
+    showToast("Posted!", "success");
   }
 });
 

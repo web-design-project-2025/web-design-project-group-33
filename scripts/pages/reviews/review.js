@@ -1,5 +1,7 @@
 import { ReviewComment } from "../../components/reviewComment.js";
 import { ReviewComponent as Review } from "../../components/reviewComponent.js";
+import { getComments, postComment } from "../../api/commentData.js";
+import { showToast } from "../../main.js";
 
 const reviewContainer = document.querySelector(".review-container");
 const commentsContainer = document.querySelector(".comments-container");
@@ -15,17 +17,13 @@ const review = await fetch("/data/reviews.json")
     return data.find((review) => review.id === reviewId);
   });
 
-const comments = await fetch("/data/comments.json")
-  .then((res) => res.json())
-  .then((data) => {
-    const arr = [];
-    data.forEach((comment) => {
-      if (comment.review_id === reviewId) {
-        arr.push(comment);
-      }
-    });
-    return arr;
-  });
+const commentData = await getComments();
+const comments = [];
+commentData.forEach((comment) => {
+  if (comment.review_id === reviewId) {
+    comments.push(comment);
+  }
+});
 
 reviewContainer.appendChild(await Review(review));
 
@@ -41,8 +39,21 @@ commentForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const input = document.getElementById("input");
-  const value = input.value;
-  input.value = "";
+  const content = input.value;
 
-  console.log(value);
+  if (content === "") {
+    showToast("Comment Empty", "error");
+    return;
+  }
+  const id = commentData[commentData.length - 1].id + 1; //bad fix deluxe but we not using uuid soooo...
+  const user_id = 1;
+  postComment({
+    id,
+    user_id,
+    review_id: reviewId,
+    content,
+    likes: 0,
+  });
+  input.value = "";
+  showToast("Posted!", "success");
 });
