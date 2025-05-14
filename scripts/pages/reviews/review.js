@@ -20,7 +20,7 @@ const movies = await getMovies();
 const movie = movies.find((movie) => movie.id === review.movie_id);
 
 const sectionTitle = document.querySelector(".section-title");
-sectionTitle.innerText = `◀︎Review for: ${movie.title}`;
+sectionTitle.innerText = `🡰 Review for: ${movie.title}`;
 
 reviewContainer.appendChild(await Review(review, movie));
 
