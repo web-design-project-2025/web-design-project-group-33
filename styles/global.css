@@ -1219,6 +1219,18 @@ footer {
 
 #review-page .back-button {
   width: 40px;
+  /* padding: 1px; */
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 1px;
+}
+
+#review-page .back-button:hover {
+  background-color: #ffffff14;
+}
+
+#review-page .back-button:active {
+  background-color: #ffffff1c;
 }
 
 #review-page .section-header {

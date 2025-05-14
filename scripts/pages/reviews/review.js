@@ -41,7 +41,11 @@ comments.forEach(async (comment) => {
 });
 
 backButton.addEventListener("click", (e) => {
-  history.back();
+  if (document.referrer) {
+    window.location.assign(document.referrer);
+  } else {
+    window.location.href = "/";
+  }
 });
 
 commentForm.addEventListener("submit", (e) => {
