@@ -65,7 +65,7 @@ textarea {
 .navbar .nav-links a:hover,
 .mobile-menu .links a:hover,
 .footer-ul li a:hover,
-.sort-button:hover,
+.sort-button-text:hover,
 .sort-menu .option:hover,
 .movies-container .title:hover,
 .view-more:hover {
@@ -117,6 +117,10 @@ textarea {
 
 .button:hover {
   background-color: var(--tertiary-grey);
+}
+
+.button:active {
+  background-color: #292929;
 }
 
 /*NAVBAR*/
@@ -590,9 +594,9 @@ footer {
   background-color: var(--red);
   color: var(--eggshell);
   border: 0;
-  border-radius: 100px;
-  width: 150px;
-  height: 55px;
+  border-radius: 1000px;
+  width: 8rem;
+  height: 3rem;
   padding: 6px 0;
   font-size: 20px;
   font-weight: 600;
@@ -603,25 +607,8 @@ footer {
   background-color: var(--tertiary-grey);
 }
 
-/* TESTPAGE STUFF FOR TESTING REMOVE LATER */
-.test-page {
-  margin: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-}
-
-.testcomments#comments {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-}
-@media (max-width: 600px) {
-  .testcomments#comments {
-    width: 100%;
-  }
+.button-red:active {
+  background-color: #292929;
 }
 
 /* Movie Card Component */
