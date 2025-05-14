@@ -35,15 +35,6 @@ export async function NavbarComponent() {
         />
       </a>
     </nav>
-    <div class="mobile-top-bar">
-      <a href="/index.html">
-        <img
-          src="/assets/icons/movie-roast-darkbg.svg"
-          alt="Movie-roast-logo"
-          class="mobile-logo"
-        />
-      </a>
-    </div>
     <nav class="mobile-bottom-navbar">
       <button class="hamburger" id="hamburger-btn">☰</button>
       <img src="/assets/icons/search.svg" alt="" class="search" />
@@ -84,7 +75,6 @@ export async function NavbarComponent() {
   });
 
   navbarComponent.addEventListener("click", (e) => {
-    
     const movie = e.target.closest(".search-menu ul#movies li");
     if (movie) {
       window.location.assign(`/pages/movies/movie.html?id=${movie.id}`);

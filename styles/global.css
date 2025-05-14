@@ -300,15 +300,6 @@ class="button button--grey"   for grey
 }
 
 /*NAV-Mobile*/
-.mobile-top-bar {
-  display: none;
-  padding: 1rem;
-  background-color: var(--primary-grey);
-}
-
-.mobile-logo {
-  height: 3rem;
-}
 
 .mobile-bottom-navbar {
   display: none;
@@ -388,14 +379,21 @@ class="button button--grey"   for grey
 }
 
 @media (max-width: 767px) {
-  .navbar {
+  .navbar .logo {
+    width: 70%;
+    margin: 0;
+  }
+  .navbar .nav-links a,
+  .navbar .profile-pic {
     display: none;
   }
-
-  .mobile-top-bar,
+  .navbar {
+    height: 5rem;
+  }
   .mobile-bottom-navbar {
     display: flex;
   }
+
 }
 
 /* Footer styling */
