@@ -5,7 +5,7 @@ import { ReviewComponent as Review } from "../../components/reviewComponent.js";
 const reviewContainer = document.querySelector(".review-container");
 const commentsContainer = document.querySelector(".comments-container");
 const commentForm = document.querySelector(".comment-form");
-const backButton = document.querySelector(".section-title");
+const backButton = document.querySelector(".back-button");
 
 const urlParams = new URLSearchParams(window.location.search);
 const reviewId = parseInt(urlParams.get("id"), 10);
@@ -20,7 +20,7 @@ const movies = await getMovies();
 const movie = movies.find((movie) => movie.id === review.movie_id);
 
 const sectionTitle = document.querySelector(".section-title");
-sectionTitle.innerText = `🡰 Review for: ${movie.title}`;
+sectionTitle.innerText = `${movie.title}`;
 
 reviewContainer.appendChild(await Review(review, movie));
 

@@ -923,8 +923,7 @@ footer {
   width: 100%;
   gap: 1rem;
   align-items: baseline;
-  padding: 0.4rem;
-  padding-left: 1rem;
+  padding: 0.4rem 1.4rem 0.4rem 1.4rem;
   z-index: 1000;
 }
 
@@ -1213,13 +1212,19 @@ footer {
   gap: 1.5rem;
   align-items: center;
 }
-.page-content#review-page .section-title {
-  font-size: 24px;
-  cursor: pointer;
-}
 
 .page-content#review-page .divider {
   display: none;
+}
+
+#review-page .back-button {
+  width: 40px;
+}
+
+#review-page .section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .comments-container {
