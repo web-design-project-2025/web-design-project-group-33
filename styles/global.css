@@ -72,6 +72,17 @@ textarea {
   opacity: 0.8;
 }
 
+.navbar p:active,
+.navbar .nav-links a:active,
+.mobile-menu .links a:active,
+.footer-ul li a:active,
+.sort-button-text:active,
+.sort-menu .option:active,
+.movies-container .title:active,
+.view-more:active {
+  opacity: 0.95;
+}
+
 /* background graphic */
 
 .background-wrapper {
@@ -115,11 +126,15 @@ textarea {
   cursor: pointer;
 }
 
-.button:hover {
+.button:hover,
+.write-review-button:hover,
+.comment-button:hover {
   background-color: var(--tertiary-grey);
 }
 
-.button:active {
+.button:active,
+.write-review-button:active,
+.comment-button:active {
   background-color: #292929;
 }
 
@@ -1113,7 +1128,7 @@ footer {
   font-weight: 600;
 }
 
-.movie-page .write-review-button {
+.write-review-button {
   width: 7.5rem;
   height: 3rem;
   border-radius: 1000px;
@@ -1123,10 +1138,6 @@ footer {
   background-color: var(--red);
   border: none;
   cursor: pointer;
-}
-
-.movie-page .write-review-button:hover {
-  background-color: var(--tertiary-grey);
 }
 
 @media (max-width: 767px) {
@@ -1247,8 +1258,4 @@ footer {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-}
-
-.comment-button:hover {
-  background-color: var(--tertiary-grey);
 }
