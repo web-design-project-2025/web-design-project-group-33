@@ -34,7 +34,7 @@ reviewData.forEach((review) => {
 });
 
 reviews.forEach(async (review) => {
-  reviewContainer.appendChild(await ReviewComponent(review));
+  reviewContainer.appendChild(await ReviewComponent(review, movie));
 });
 
 const formWrapper = document.querySelector(".form-wrapper");

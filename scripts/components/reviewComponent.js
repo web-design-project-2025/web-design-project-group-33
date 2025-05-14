@@ -1,6 +1,6 @@
 import { getMovies } from "../api/movieData.js";
 
-export async function ReviewComponent(review) {
+export async function ReviewComponent(review, movie) {
   const reviewComponent = document.createElement("div");
   reviewComponent.className = "review-component";
 
@@ -8,10 +8,7 @@ export async function ReviewComponent(review) {
     .then((res) => res.json())
     .then((data) => data);
 
-  const movies = await getMovies();
-
   const user = users.find((user) => user.id === review.user_id);
-  const movie = movies.find((movie) => movie.id === review.movie_id);
   const releaseYear = movie.releaseDate.match(/^\d{4}/)[0];
 
   reviewComponent.innerHTML = `  

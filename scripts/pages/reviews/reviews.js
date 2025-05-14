@@ -1,10 +1,13 @@
 import { ReviewComponent as Review } from "../../components/reviewComponent.js";
+import { getMovies } from "../../api/movieData.js";
 
 const container = document.querySelector(".review-container");
 
 const reviews = await fetch("/data/reviews.json")
   .then((res) => res.json())
   .then((data) => data);
+
+const movies = await getMovies();
 
 const urlParams = new URLSearchParams(window.location.search);
 const sort = urlParams.get("sort");
@@ -23,9 +26,9 @@ if (sort === "top") {
   reviews.sort((a, b) => b.likes - a.likes);
 }
 
-reviews.forEach(async (reviewData) => {
-  const review = await Review(reviewData);
-  container.appendChild(review);
+reviews.forEach(async (review) => {
+  const movie = movies.find((movie) => movie.id === review.movie_id);
+  container.appendChild(await Review(review, movie));
 });
 
 const sortButton = document.querySelector(".sort-button p");

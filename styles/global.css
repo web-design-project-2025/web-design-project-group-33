@@ -16,6 +16,8 @@ html {
 * {
   margin: 0;
   box-sizing: border-box;
+  position: relative;
+  z-index: 100;
 }
 
 body {
@@ -124,6 +126,35 @@ textarea {
     opacity: 0;
   }
 }
+/* background graphic */
+
+.background-wrapper {
+  position: fixed;
+  top: 8rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+
+.background-graphic {
+  height: auto;
+  height: 150vh;
+  /* width: 25vw; */
+  object-fit: cover;
+  position: absolute;
+  transform: translateY(0);
+}
+
+@media (max-width: 991px) {
+  .background-wrapper {
+    opacity: 0;
+  }
+}
 
 /*
 Buttons 
@@ -170,7 +201,6 @@ class="button button--grey"   for grey
   display: flex;
   list-style: none;
   padding: 0rem;
-  
 }
 
 .search-menu ul#movies li {
@@ -196,7 +226,7 @@ class="button button--grey"   for grey
 #navbar-component {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .navbar {
@@ -961,6 +991,7 @@ footer {
   align-items: baseline;
   padding: 0.4rem;
   padding-left: 1rem;
+  z-index: 1000;
 }
 
 .section-title {
