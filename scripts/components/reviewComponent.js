@@ -13,7 +13,7 @@ export async function ReviewComponent(review, movie) {
 
   reviewComponent.innerHTML = `  
         <article class="review-component-container">
-          <a href="../movies/movie.html?id=${review.movie_id}">
+          <a href="/pages/movies/movie.html?id=${review.movie_id}">
           <img
             src="${movie.poster}"
             alt="${movie.name} Poster"
@@ -23,8 +23,8 @@ export async function ReviewComponent(review, movie) {
           <section class="review-content">
             <div class="picture-username-movietitle">
               <img src="${user.image}" alt="User Profile Picture" />
-              <a href="../reviews/review.html?id=${review.id}">${user.name}</a>
-              <a href="../movies/movie.html?id=${review.movie_id}" class="movie-title-review-component"
+              <a href="/pages/reviews/review.html?id=${review.id}">${user.name}</a>
+              <a href="/pages/movies/movie.html?id=${review.movie_id}" class="movie-title-review-component"
                 ><span>${movie.title}</span> (${releaseYear})</a
               >
             </div>

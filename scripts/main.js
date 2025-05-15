@@ -11,6 +11,19 @@ setTimeout(() => {
   document.querySelector("footer").classList.add("visible");
 }, 100);
 
+const slider = document.querySelector(".slider");
+const slides = document.querySelectorAll(".homepage-cover-photo");
+let current = 0;
+
+setInterval(() => {
+  current = (current + 1) % slides.length;
+  const slide = slides[current];
+  slider.scrollTo({
+    left: slide.offsetLeft,
+    behavior: "smooth",
+  });
+}, 6000);
+
 const toast = document.createElement("div");
 toast.classList.add("toast");
 document.body.appendChild(toast);

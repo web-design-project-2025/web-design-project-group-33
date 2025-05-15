@@ -193,11 +193,11 @@ textarea {
 }
 
 .button {
-  width: 7rem;
-  height: 2.5rem;
+  width: 7.5rem;
+  height: 3rem;
   border-radius: 1000px;
   font-weight: 600;
-  font-size: 19px;
+  font-size: 15px;
   color: var(--eggshell);
   background-color: var(--red);
   border: none;
@@ -535,9 +535,23 @@ footer.visible {
 
 /* Homepage */
 .homepage-cover-photo {
-  width: 100%;
-  height: 38rem;
+  width: 100vw;
+  height: 100%;
   object-fit: cover;
+  flex-shrink: 0;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.slider {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  height: 39rem;
 }
 
 .cover-text-overlay {
@@ -546,29 +560,26 @@ footer.visible {
   width: 100%;
   align-items: center;
   color: var(--eggshell);
-  font-size: 40px;
+  font-size: 20px;
   justify-content: center;
   position: absolute;
-  top: 15rem;
+  top: 28rem;
   padding: 1rem;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
 }
 
 .cover-text-overlay img {
   width: 250px;
 }
 
-@media screen and (max-width: 768px) {
-  .homepage-cover-photo {
-    display: none;
-  }
-  .cover-text-overlay {
-    display: none;
-  }
-}
-
 .homepage-buttom-section {
-  margin: 2rem 0 6rem 10%;
   color: var(--white);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 5rem;
+  align-items: flex-end;
 }
 
 .homepage-buttom-section h3 {
@@ -585,7 +596,22 @@ footer.visible {
 
 .homepage-explore-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  width: 30rem;
+}
+
+@media screen and (max-width: 768px) {
+  .homepage-explore-container {
+    width: 100%;
+  }
+  .homepage-buttom-section {
+    flex-direction: column;
+    align-items: start;
+    margin-left: 3rem;
+  }
+  .button {
+    margin-left: 0;
+  }
 }
 
 /*About*/
@@ -980,6 +1006,10 @@ footer.visible {
   text-decoration: none;
   margin-left: 2rem;
   cursor: pointer;
+}
+
+.sort-button.disabled {
+  display: none;
 }
 
 .sort-button p {
