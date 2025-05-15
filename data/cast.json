@@ -1,0 +1,102 @@
+[
+  {
+    "movie_id": 14164,
+    "director": "James Wong",
+    "top_actors": ["Justin Chatwin", "Chow Yun-Fat", "Emmy Rossum"]
+  },
+  {
+    "movie_id": 13805,
+    "director": "Jason Friedberg, Aaron Seltzer",
+    "top_actors": ["Matt Lanter", "Vanessa Minnillo", "Gary 'G Thang' Johnson"]
+  },
+  {
+    "movie_id": 485774,
+    "director": "Matt Angel, Suzanne Coote",
+    "top_actors": ["Dylan Minnette", "Piercey Dalton", "Patricia Bethune"]
+  },
+  {
+    "movie_id": 9760,
+    "director": "Jason Friedberg, Aaron Seltzer",
+    "top_actors": ["Kal Penn", "Adam Campbell", "Jennifer Coolidge"]
+  },
+  {
+    "movie_id": 205321,
+    "director": "Anthony C. Ferrante",
+    "top_actors": ["Ian Ziering", "Tara Reid", "John Heard"]
+  },
+  {
+    "movie_id": 17473,
+    "director": "Tommy Wiseau",
+    "top_actors": ["Tommy Wiseau", "Juliette Danielle", "Greg Sestero"]
+  },
+  {
+    "movie_id": 580,
+    "director": "Joseph Sargent",
+    "top_actors": ["Lorraine Gary", "Lance Guest", "Mario Van Peebles"]
+  },
+  {
+    "movie_id": 7278,
+    "director": "Jason Friedberg, Aaron Seltzer",
+    "top_actors": ["Sean Maguire", "Carmen Electra", "Kevin Sorbo"]
+  },
+  {
+    "movie_id": 10214,
+    "director": "Lawrence Guterman",
+    "top_actors": ["Jamie Kennedy", "Alan Cumming", "Traylor Howard"]
+  },
+  {
+    "movie_id": 218043,
+    "director": "Vic Armstrong",
+    "top_actors": ["Nicolas Cage", "Chad Michael Murray", "Cassi Thomson"]
+  },
+  {
+    "movie_id": 351460,
+    "director": "Adam Wingard",
+    "top_actors": ["Nat Wolff", "LaKeith Stanfield", "Margaret Qualley"]
+  },
+  {
+    "movie_id": 439015,
+    "director": "Sylvain White",
+    "top_actors": ["Joey King", "Julia Goldani Telles", "Jaz Sinclair"]
+  },
+  {
+    "movie_id": 9708,
+    "director": "Neil LaBute",
+    "top_actors": ["Nicolas Cage", "Ellen Burstyn", "Leelee Sobieski"]
+  },
+  {
+    "movie_id": 71668,
+    "director": "John Gulager",
+    "top_actors": ["Danielle Panabaker", "Matt Bush", "David Koechner"]
+  },
+  {
+    "movie_id": 40264,
+    "director": "Jason Friedberg, Aaron Seltzer",
+    "top_actors": ["Jenn Proske", "Matt Lanter", "Chris Riggi"]
+  },
+  {
+    "movie_id": 415,
+    "director": "Joel Schumacher",
+    "top_actors": ["George Clooney", "Chris O'Donnell", "Arnold Schwarzenegger"]
+  },
+  {
+    "movie_id": 71880,
+    "director": "Dennis Dugan",
+    "top_actors": ["Adam Sandler", "Katie Holmes", "Al Pacino"]
+  },
+  {
+    "movie_id": 166424,
+    "director": "Josh Trank",
+    "top_actors": ["Miles Teller", "Michael B. Jordan", "Kate Mara"]
+  },
+  {
+    "movie_id": 472838,
+    "director": "Alex Israel",
+    "top_actors": ["Carson Meyer", "Noah Centineo", "Bianca A. Santos"]
+  },
+  {
+    "movie_id": 9607,
+    "director": "Annabel Jankel, Rocky Morton",
+    "top_actors": ["Bob Hoskins", "John Leguizamo", "Dennis Hopper"]
+  }
+]

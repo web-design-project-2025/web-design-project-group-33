@@ -16,10 +16,15 @@
   <script type="module" src="/scripts/main.js"></script>
   <body>
     <nav id="navbar-component"></nav>
-    <div id="review-page" class="page-content">
+    <main id="review-page" class="page-content">
       <div class="review-section">
         <div class="section-header">
-          <h2 class="section-title">◀︎</h2>
+          <h2 class="section-title"></h2>
+          <img
+            class="back-button"
+            src="/assets/icons/back-button.svg"
+            alt="Back button"
+          />
         </div>
         <div class="review-container"></div>
         <form autocomplete="off" class="comment-form">
@@ -33,7 +38,7 @@
         </form>
         <div class="comments-container"></div>
       </div>
-    </div>
+    </main>
     <footer id="footer-component"></footer>
   </body>
 </html>

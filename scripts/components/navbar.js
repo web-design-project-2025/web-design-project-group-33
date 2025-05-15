@@ -13,15 +13,16 @@ export async function NavbarComponent() {
       <a href="/index.html">
         <img
           src="/assets/icons/movie-roast-darkbg.svg"
-          alt="Movie-roast-logo"
+          alt="Movie Roast"
           class="logo"
         />
       </a>
       <div class="nav-links">
-        <a href="/pages/reviews/reviews.html">Reviews</a>
+        <a href="/pages/reviews/reviews.html?sort=trending">Reviews</a>
         <a href="/pages/movies/movies.html">Movies</a>
+        <a href="/pages/blog/blog.html">Blog</a>
         <form class="searchbar-wrapper">
-          <input id="searchbar" type="text" placeholder="Search..." value="" />
+          <input id="searchbar" class="searchbar" type="text" placeholder="Search..." value="" />
           <div class="search-menu">
           <ul id="movies"></ul>
           </div>
@@ -35,18 +36,9 @@ export async function NavbarComponent() {
         />
       </a>
     </nav>
-    <div class="mobile-top-bar">
-      <a href="/index.html">
-        <img
-          src="/assets/icons/movie-roast-darkbg.svg"
-          alt="Movie-roast-logo"
-          class="mobile-logo"
-        />
-      </a>
-    </div>
     <nav class="mobile-bottom-navbar">
       <button class="hamburger" id="hamburger-btn">☰</button>
-      <img src="/assets/icons/search.svg" alt="" class="search" />
+      <img src="/assets/icons/search.svg" alt="" class="search" id="search-button"/>
       <a id="profile-icon" href="/pages/profile/profile.html">
         <img
           src="/assets/pictures/profil.jpg"
@@ -64,7 +56,7 @@ export async function NavbarComponent() {
       <div class="links">
         <a href="/pages/reviews/reviews.html">Reviews</a>
         <a href="/pages/movies/movies.html">Movies</a>
-        <a href="/about.html">About</a>
+        <a href="/pages/blog/blog.html">Blog</a>
         <a href="/pages/profile/profile.html">Profile</a>
       </div>
     </div>
@@ -84,10 +76,20 @@ export async function NavbarComponent() {
   });
 
   navbarComponent.addEventListener("click", (e) => {
-    
     const movie = e.target.closest(".search-menu ul#movies li");
     if (movie) {
       window.location.assign(`/pages/movies/movie.html?id=${movie.id}`);
+    }
+  });
+
+  const searchButton = navbarComponent.querySelector("#search-button");
+  const logo = navbarComponent.querySelector(".navbar .logo");
+  const searchbarMobile = navbarComponent.querySelector(".navbar .searchbar");
+
+  document.addEventListener("click", (e) => {
+    if (e.target === searchButton) {
+      logo.classList.toggle("logo-hidden");
+      searchbarMobile.classList.toggle("searchbar-visible");
     }
   });
 
