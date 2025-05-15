@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/kxb7wrw.css" />
     <link rel="stylesheet" href="/styles/global.css" />
     <script type="module" src="/scripts/main.js"></script>
+    <script type="module" src="/scripts/pages/reviews/reviews.js"></script>
     <link
       rel="icon"
       href="/assets/icons/movie-roast-small.svg"
@@ -15,39 +16,77 @@
   </head>
   <body>
     <nav id="navbar-component"></nav>
-    <img
-      src="assets/pictures/homepage-cover-photo.jpg"
-      alt="Morbius Cover"
-      class="homepage-cover-photo"
-    />
+    <section class="container">
+      <div class="sliderwrapper">
+        <div class="slider">
+          <img
+            src="assets\pictures\hompage-cover-01.jpg"
+            alt="Morbius Cover"
+            class="homepage-cover-photo"
+            id="slide-1"
+          />
+          <img
+            src="assets\pictures\hompage-cover-02.jpg"
+            alt="Morbius Cover"
+            class="homepage-cover-photo"
+            id="slide-2"
+          />
+          <img
+            src="assets\pictures\hompage-cover-03.jpg"
+            alt="Morbius Cover"
+            class="homepage-cover-photo"
+            id="slide-3"
+          />
+        </div>
+      </div>
+    </section>
+    <div class="page-content">
+      <section id="movies-trending" class="movies-section">
+        <div class="section-header">
+          <h2 class="section-title">Trending Reviews</h2>
+          <div class="sort-button">
+            <p>Sort By</p>
+            <div class="sort-menu">
+              <p id="newest" class="option">Newest</p>
+              <p id="trending" class="option">Trending</p>
+              <p id="top" class="option">Most Liked</p>
+            </div>
+          </div>
+        </div>
+        <div class="review-container"></div>
+      </section>
+    </div>
     <header class="cover-text-overlay">
-      <img
-        src="assets/icons/movie-roast-small.svg"
-        alt="Movie Roast Popcorn Logo"
-      />
       <div>
-        <h3>Welcome to</h3>
+        <h3 class="header1">Welcome to</h3>
         <h1>Movie Roast</h1>
+        <p>
+          This isn’t your average review site. At Movie Roast, we don’t just
+          critique — we destroy.
+        </p>
+        <p>
+          The worse the take, the louder the laugh. Let’s roast some cinema!
+        </p>
       </div>
     </header>
     <section class="homepage-buttom-section">
-      <h3>
-        The best place on the internet for others to shit on your favorite
-        movie.
-      </h3>
       <div class="homepage-explore-container">
+        <h3>
+          The best place on the internet for others to shit on your favorite
+          movie.
+        </h3>
         <p>
           Let’s face it, you have bad taste. But instead of crying about it, you
           can shit on people that have even worse taste. So go and Roast some
           Movies!
         </p>
-        <button
-          class="button button--grey hover-cursor-style"
-          onclick="location.href='pages/reviews/reviews.html'"
-        >
-          Explore
-        </button>
       </div>
+      <button
+        class="button button--grey hover-cursor-style"
+        onclick="location.href='pages/reviews/reviews.html'"
+      >
+        Explore
+      </button>
     </section>
     <footer id="footer-component"></footer>
   </body>

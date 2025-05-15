@@ -16,7 +16,7 @@ export async function ReviewComponent(review) {
 
   reviewComponent.innerHTML = `  
         <article class="review-component-container">
-          <a href="../movies/movie.html?id=${review.movie_id}">
+          <a href="pages/movies/movie.html?id=${review.movie_id}">
           <img
             src="${movie.poster}"
             alt="${movie.name} Poster"
@@ -26,8 +26,8 @@ export async function ReviewComponent(review) {
           <section class="review-content">
             <div class="picture-username-movietitle">
               <img src="${user.image}" alt="User Profile Picture" />
-              <a href="../reviews/review.html?id=${review.id}">${user.name}</a>
-              <a href="../movies/movie.html?id=${review.movie_id}" class="movie-title-review-component"
+              <a href="pages/reviews/review.html?id=${review.id}">${user.name}</a>
+              <a href="pages/movies/movie.html?id=${review.movie_id}" class="movie-title-review-component"
                 ><span>${movie.title}</span> (${releaseYear})</a
               >
             </div>
@@ -39,7 +39,7 @@ export async function ReviewComponent(review) {
                 <span>${review.likes}</span>
                 <img src="/assets/icons/heart.svg" alt="Like Button" />
               </button>
-              <button onclick="window.location.assign('review.html?id=${review.id}')">
+              <button onclick="window.location.assign('pages/reviews/review.html?id=${review.id}')">
                 <img src="/assets/icons/comment.svg" alt="Comment Button" />
               </button>
               <button>
