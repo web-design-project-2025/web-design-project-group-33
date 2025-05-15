@@ -66,11 +66,11 @@ class="button"                for red
 class="button button--grey"   for grey
 */
 .button {
-  width: 7rem;
-  height: 2.5rem;
+  width: 7.5rem;
+  height: 3rem;
   border-radius: 1000px;
   font-weight: 600;
-  font-size: 19px;
+  font-size: 15px;
   color: var(--eggshell);
   background-color: var(--red);
   border: none;
@@ -104,7 +104,6 @@ class="button button--grey"   for grey
   display: flex;
   list-style: none;
   padding: 0rem;
-  
 }
 
 .search-menu ul#movies li {
