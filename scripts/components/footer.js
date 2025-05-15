@@ -16,9 +16,9 @@ export function FooterComponent() {
                 id="footer-movie-roast-logo"
               />
             </li>
-            <li>
-              Bad taste is everywhere—especially yours. But don’t worry, someone
-              else’s is worse. Scroll up, roast a movie, and feel slightly
+            <li class="footer-text">
+              Bad taste is everywhere—especially yours. But don't worry, someone
+              else's is worse. Scroll up, roast a movie, and feel slightly
               better about yourself..
             </li>
           </ul>
@@ -37,6 +37,7 @@ export function FooterComponent() {
           <li><a href="/index.html">Home</a></li>
           <li><a href="/pages/reviews/reviews.html">Reviews</a></li>
           <li><a href="/pages/movies/movies.html">Movies</a></li>
+          <li><a href="/pages/blog/blog.html">Blog</a></li>
           <li><a href="/about.html">About</a></li>
         </ul>
         <ul class="footer-ul">
