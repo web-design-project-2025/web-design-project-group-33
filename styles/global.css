@@ -1409,11 +1409,6 @@ footer.visible {
   align-items: center;
 }
 
-.page-content#review-page .section-title {
-  font-size: 24px;
-  cursor: pointer;
-}
-
 .page-content#review-page .divider {
   display: none;
 }
