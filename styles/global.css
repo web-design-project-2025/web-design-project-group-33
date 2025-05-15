@@ -1230,6 +1230,12 @@ footer {
   cursor: pointer;
 }
 
+.director,
+.stars {
+  word-spacing: 1.5px;
+  margin-left: 0.3rem;
+}
+
 @media (max-width: 767px) {
   .movie-page .poster-review-rating {
     top: 3rem;

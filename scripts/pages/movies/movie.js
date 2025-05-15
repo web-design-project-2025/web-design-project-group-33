@@ -25,6 +25,18 @@ const releaseDate = document.createElement("span");
 releaseDate.innerHTML = movie.releaseDate.match(/^\d{4}/)[0];
 title.appendChild(releaseDate);
 
+const cast = await fetch("/data/cast.json")
+  .then((res) => res.json())
+  .then((data) => data);
+
+const director = document.querySelector(".director");
+const stars = document.querySelector(".stars");
+
+const movieCast = cast.find((c) => c.movie_id === movieId);
+
+director.innerText = movieCast.director;
+stars.innerText = movieCast.top_actors.join(", ");
+
 const reviewData = await getReviews();
 const reviews = [];
 reviewData.forEach((review) => {
