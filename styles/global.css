@@ -73,6 +73,28 @@ textarea {
   font-style: normal;
 }
 
+.navbar p:hover,
+.navbar .nav-links a:hover,
+.mobile-menu .links a:hover,
+.footer-ul li a:hover,
+.sort-button-text:hover,
+.sort-menu .option:hover,
+.movies-container .title:hover,
+.view-more:hover {
+  color: #fff9e3d5;
+}
+
+.navbar p:active,
+.navbar .nav-links a:active,
+.mobile-menu .links a:active,
+.footer-ul li a:active,
+.sort-button-text:active,
+.sort-menu .option:active,
+.movies-container .title:active,
+.view-more:active {
+  color: #fff9e3ed;
+}
+
 /* toast */
 .toast {
   position: fixed;
@@ -170,12 +192,6 @@ textarea {
   }
 }
 
-/*
-Buttons 
-Use class names:
-class="button"                for red
-class="button button--grey"   for grey
-*/
 .button {
   width: 7rem;
   height: 2.5rem;
@@ -189,8 +205,16 @@ class="button button--grey"   for grey
   cursor: pointer;
 }
 
-.button--grey {
+.button:hover,
+.write-review-button:hover,
+.comment-button:hover {
   background-color: var(--tertiary-grey);
+}
+
+.button:active,
+.write-review-button:active,
+.comment-button:active {
+  background-color: #292929;
 }
 
 /*NAVBAR*/
@@ -283,11 +307,6 @@ class="button button--grey"   for grey
 
 .navbar img {
   margin: 0;
-}
-
-.navbar p:hover,
-.navbar a:hover {
-  color: #a39fa2;
 }
 
 #profile-icon img:hover {
@@ -706,9 +725,9 @@ footer.visible {
   background-color: var(--red);
   color: var(--eggshell);
   border: 0;
-  border-radius: 100px;
-  width: 150px;
-  height: 55px;
+  border-radius: 1000px;
+  width: 8rem;
+  height: 3rem;
   padding: 6px 0;
   font-size: 20px;
   font-weight: 600;
@@ -716,28 +735,11 @@ footer.visible {
 }
 
 .button-red:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--tertiary-grey);
 }
 
-/* TESTPAGE STUFF FOR TESTING REMOVE LATER */
-.test-page {
-  margin: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-}
-
-.testcomments#comments {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-}
-@media (max-width: 600px) {
-  .testcomments#comments {
-    width: 100%;
-  }
+.button-red:active {
+  background-color: #292929;
 }
 
 /* Movie Card Component */
@@ -1011,9 +1013,7 @@ footer.visible {
   font-weight: 300;
   font-size: 20px;
 }
-.sort-menu .option:hover {
-  opacity: 0.8;
-}
+
 .sort-menu .option:active {
   opacity: 0.6;
 }
@@ -1079,9 +1079,6 @@ footer.visible {
   text-decoration: none;
 }
 
-.view-more:hover {
-  opacity: 0.8;
-}
 .view-more:active {
   opacity: 0.7;
 }
@@ -1294,7 +1291,7 @@ footer.visible {
   font-weight: 600;
 }
 
-.movie-page .write-review-button {
+.write-review-button {
   width: 7.5rem;
   height: 3rem;
   border-radius: 1000px;
