@@ -189,6 +189,9 @@ class="button button--grey"   for grey
   background-color: #171415;
   position: absolute;
   pointer-events: none;
+  border-radius: 10px;
+  margin-top: 2px;
+  border: 1px solid #131011;
 }
 
 .search-menu.open {
@@ -222,6 +225,10 @@ class="button button--grey"   for grey
 .search-menu ul#movies li p {
   font-size: 16px;
   font-weight: 500;
+}
+
+.search-menu ul#movies li:hover {
+  background-color: var(--tertiary-grey);
 }
 
 #navbar-component {
@@ -298,15 +305,6 @@ class="button button--grey"   for grey
 }
 
 /*NAV-Mobile*/
-.mobile-top-bar {
-  display: none;
-  padding: 1rem;
-  background-color: var(--primary-grey);
-}
-
-.mobile-logo {
-  height: 3rem;
-}
 
 .mobile-bottom-navbar {
   display: none;
@@ -386,13 +384,45 @@ class="button button--grey"   for grey
 }
 
 @media (max-width: 767px) {
-  .navbar {
+  .navbar .nav-links a,
+  .navbar .profile-pic {
     display: none;
   }
-
-  .mobile-top-bar,
+  .navbar {
+    height: 5rem;
+    padding: 0;
+  }
   .mobile-bottom-navbar {
     display: flex;
+  }
+  .navbar .logo {
+    padding-left: 2rem;
+    width: 70%;
+    margin: 0;
+  }
+  .navbar .logo-hidden {
+    display: none;
+  }
+  .navbar .searchbar {
+    display: none;
+  }
+  .navbar .searchbar-visible {
+    display: flex;
+  }
+  #searchbar {
+    height: 3rem;
+  }
+  .searchbar-wrapper {
+    max-width: 999rem;
+  }
+  .search-menu {
+    max-width: 999rem;
+  }
+  .nav-links {
+    justify-content: center;
+  }
+  .search-menu ul#movies li p {
+    font-size: 24px;
   }
 }
 
