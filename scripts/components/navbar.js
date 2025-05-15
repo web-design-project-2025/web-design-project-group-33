@@ -13,12 +13,12 @@ export async function NavbarComponent() {
       <a href="/index.html">
         <img
           src="/assets/icons/movie-roast-darkbg.svg"
-          alt="Movie-roast-logo"
+          alt="Movie Roast"
           class="logo"
         />
       </a>
       <div class="nav-links">
-        <a href="/pages/reviews/reviews.html">Reviews</a>
+        <a href="/pages/reviews/reviews.html?sort=trending">Reviews</a>
         <a href="/pages/movies/movies.html">Movies</a>
         <a href="/pages/blog/blog.html">Blog</a>
         <form class="searchbar-wrapper">
