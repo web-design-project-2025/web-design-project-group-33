@@ -20,6 +20,17 @@ html {
   z-index: 100;
 }
 
+* {
+  opacity: 0;
+  animation: fadeIn 0.15s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 body {
   background-color: var(--secondary-grey);
   margin: 0;
@@ -79,6 +90,7 @@ textarea {
   pointer-events: none;
   transition: transform 0.4s ease, opacity 0.4s ease;
   z-index: 9999;
+  animation: none;
 }
 
 .toast#success {
@@ -140,6 +152,7 @@ textarea {
   z-index: 0;
   opacity: 1;
   transition: opacity 0.2s ease-in;
+  animation: none;
 }
 
 .background-graphic {
@@ -242,6 +255,7 @@ class="button button--grey"   for grey
 
 .navbar .logo {
   height: 5rem;
+  width: 15rem;
   border: 0;
   margin-top: -10px;
 }
@@ -401,6 +415,11 @@ footer {
   background-color: var(--primary-grey);
   color: var(--eggshell);
   padding: 2rem 2rem 3rem 2rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+footer.visible {
+  opacity: 1;
 }
 
 .footer-ul {
@@ -698,6 +717,10 @@ footer {
   flex-direction: column;
   gap: 8px;
   cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
 }
 
 .movie-card .poster {
@@ -715,6 +738,19 @@ footer {
 }
 
 /* Review component */
+
+.review-component {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .review-component-container {
   display: flex;
@@ -858,6 +894,10 @@ footer {
   padding-bottom: 1rem;
   font-weight: 450;
   border-bottom: var(--tertiary-grey) 1px solid;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
 }
 @media screen and (max-width: 768px) {
   .review-comment {
@@ -899,6 +939,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* min-height: ; */
 }
 
 .sort-button {
@@ -1087,11 +1128,16 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  animation: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .form-wrapper.open {
   visibility: visible;
   pointer-events: all;
+  opacity: 1;
 }
 
 .movie-page {

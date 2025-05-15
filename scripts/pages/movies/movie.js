@@ -1,4 +1,4 @@
-import { ReviewComponent } from "../../components/reviewComponent.js";
+import { ReviewComponent as Review } from "../../components/reviewComponent.js";
 import { ReviewTextBox as ReviewForm } from "../../components/reviewTextBox.js";
 import { getMovies } from "../../api/movieData.js";
 import { getReviews, postReview } from "../../api/reviewData.js";
@@ -33,8 +33,10 @@ reviewData.forEach((review) => {
   }
 });
 
-reviews.forEach(async (review) => {
-  reviewContainer.appendChild(await ReviewComponent(review, movie));
+reviews.forEach(async (review, index) => {
+  const reviewElement = await Review(review, movie);
+  reviewElement.style.animationDelay = `${index * 100}ms`;
+  reviewContainer.appendChild(reviewElement);
 });
 
 const formWrapper = document.querySelector(".form-wrapper");

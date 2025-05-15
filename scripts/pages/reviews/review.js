@@ -34,8 +34,11 @@ commentData.forEach((comment) => {
   }
 });
 
-comments.forEach(async (comment) => {
-  commentsContainer.appendChild(await ReviewComment(comment));
+comments.forEach(async (comment, index) => {
+  const commentElement = await ReviewComment(comment);
+  commentElement.style.animationDelay = `${index * 100}ms`;
+
+  commentsContainer.appendChild(commentElement);
 });
 
 backButton.addEventListener("click", (e) => {

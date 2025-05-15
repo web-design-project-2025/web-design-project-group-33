@@ -7,8 +7,12 @@ document.getElementById("navbar-component").appendChild(navbarElement);
 const footerElement = FooterComponent();
 document.getElementById("footer-component").appendChild(footerElement);
 
+setTimeout(() => {
+  document.querySelector("footer").classList.add("visible");
+}, 100);
+
 const toast = document.createElement("div");
-toast.classList.add("toast", "hidden");
+toast.classList.add("toast");
 document.body.appendChild(toast);
 
 export function showToast(message, type) {

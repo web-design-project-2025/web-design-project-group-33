@@ -39,7 +39,12 @@ if (sort) {
     movies.sort((a, b) => b.totalReviews - a.totalReviews);
   }
 
-  sorted.innerHTML = movies.map((movie) => MovieCard(movie)).join("");
+  // movies.forEach((movie, index) => {
+  //   const movieCard = MovieCard(movie);
+  //   movieCard.style.animationDelay = `${index * 100}ms`;
+  //   sorted.appendChild(movieCard);
+  // });
+  appendMovies(movies, sorted);
 }
 
 //disgusting fix for now
@@ -54,8 +59,27 @@ for (let i = 0; i < movies.length; i++) {
   }
 }
 
-trending.innerHTML = trendingMovies.map((movie) => MovieCard(movie)).join("");
-top.innerHTML = topMovies.map((movie) => MovieCard(movie)).join("");
+// trendingMovies.forEach((movie, index) => {
+//   const movieCard = MovieCard(movie);
+//   movieCard.style.animationDelay = `${index * 100}ms`;
+//   trending.appendChild(movieCard);
+// });
+
+// topMovies.forEach((movie, index) => {
+//   const movieCard = MovieCard(movie);
+//   movieCard.style.animationDelay = `${index * 100}ms`;
+//   top.appendChild(movieCard);
+// });
+appendMovies(trendingMovies, trending);
+appendMovies(topMovies, top);
+
+function appendMovies(movies, container) {
+  movies.forEach((movies, index) => {
+    const movieCard = MovieCard(movies);
+    movieCard.style.animationDelay = `${index * 50}ms`;
+    container.appendChild(movieCard);
+  });
+}
 
 page.addEventListener("click", (e) => {
   const card = e.target.closest(".movie-card");
