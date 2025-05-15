@@ -2,7 +2,7 @@ import { getMovies } from "../../api/movieData.js";
 import { ReviewComment } from "../../components/reviewComment.js";
 import { ReviewComponent as Review } from "../../components/reviewComponent.js";
 import { getComments, postComment } from "../../api/commentData.js";
-import { showToast } from "../../main.js";
+import { showToast, userId } from "../../main.js";
 import { getReviews } from "../../api/reviewData.js";
 
 const reviewContainer = document.querySelector(".review-container");
@@ -58,10 +58,9 @@ commentForm.addEventListener("submit", (e) => {
     return;
   }
   const id = commentData[commentData.length - 1].id + 1; //bad fix deluxe but we not using uuid soooo...
-  const user_id = 1;
   postComment({
     id,
-    user_id,
+    user_id: userId,
     review_id: reviewId,
     content,
     likes: 0,
