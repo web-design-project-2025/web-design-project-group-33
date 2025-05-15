@@ -24,7 +24,7 @@ if (window.location.pathname.includes("/pages/reviews/reviews.html")) {
   }
   if (sort === "trending") {
     reviews.sort((a, b) => b.rating - a.rating);
-    title.textContent = "Trending Reviews";
+    title.textContent = "Trending";
   }
   if (sort === "top") {
     reviews.sort((a, b) => b.likes - a.likes);

@@ -813,12 +813,9 @@ footer.visible {
 .review-component-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-
-  gap: 22px;
-  margin: 2rem;
+  /* gap: 22px; */
   color: var(--white);
-  width: 700px;
+  width: 100%;
   line-height: 23px;
 }
 
@@ -827,6 +824,7 @@ footer.visible {
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 4px;
+  margin-right: 22px;
 }
 
 .picture-username-movietitle {
@@ -868,7 +866,6 @@ footer.visible {
 }
 .like-comment-share-rating .rating {
   margin-left: auto;
-  margin-right: 0.5rem;
   font-size: 17px;
   gap: 5px;
   align-items: center;
@@ -893,6 +890,7 @@ footer.visible {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 34rem;
 }
 
 .review-content p {
@@ -905,8 +903,25 @@ footer.visible {
   width: 100%;
   border: solid var(--tertiary-grey) 1px;
   margin-top: 2rem;
-  margin-left: 2rem;
-  width: 91%;
+  margin-bottom: 2rem;
+  /* margin-left: 2rem; */
+}
+
+.comments-container {
+  width: 100%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 42rem;
+  margin: 1.5rem 0 1.5rem 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -914,29 +929,19 @@ footer.visible {
     display: none;
   }
   .review-content {
-    width: 80%;
+    width: 100%;
   }
-  .review-content p,
-  .like-comment-share-rating {
-    padding-left: 2.7rem;
+  .comments-container {
+    max-width: 34rem;
   }
-  .divider {
-    margin-left: 6.5rem;
-    width: 73%;
+  .comment-form {
+    max-width: 34rem;
   }
   .rating label {
     display: none;
   }
 }
-@media (max-width: 600px) {
-  .review-content {
-    width: 65%;
-  }
-  .divider {
-    margin-left: 9.5rem;
-    width: 60%;
-  }
-}
+
 /* Review Comment */
 
 .review-comment {
@@ -956,16 +961,6 @@ footer.visible {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease forwards;
-}
-@media screen and (max-width: 768px) {
-  .review-comment {
-    width: 80%;
-  }
-}
-@media (max-width: 600px) {
-  .review-comment {
-    width: 65%;
-  }
 }
 
 .review-comment .user-container {
@@ -1013,7 +1008,7 @@ footer.visible {
 }
 
 .sort-button p {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 550;
 }
 
@@ -1071,6 +1066,9 @@ footer.visible {
 .movies-section {
   margin-top: 3rem;
   margin-bottom: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .movies-section.hidden {
@@ -1089,15 +1087,19 @@ footer.visible {
   display: flex;
   border-radius: 5px;
   width: 100%;
+  height: 3.5rem;
+  align-items: center;
+  max-width: 1100px;
   gap: 1rem;
   align-items: baseline;
   padding: 0.4rem 1.4rem 0.4rem 1.4rem;
   z-index: 1000;
+  margin-bottom: 4rem;
 }
 
 .section-title {
   margin: 0;
-  font-size: 32px;
+  font-size: 34px;
   color: var(--eggshell);
   font-family: var(--Grotesk);
 }
@@ -1152,21 +1154,6 @@ footer.visible {
 .movies-container#sorted {
   flex-wrap: wrap;
   justify-content: center;
-}
-
-@media (min-width: 992px) {
-  .page-content {
-    margin-bottom: 3rem;
-    margin-left: 8rem;
-    margin-right: 8rem;
-  }
-}
-
-@media (min-width: 1400px) {
-  .page-content {
-    margin-left: 12rem;
-    margin-right: 12rem;
-  }
 }
 
 /* Movie page */
@@ -1354,6 +1341,10 @@ footer.visible {
   }
 }
 
+.movie-page .review-section {
+  margin-top: 8rem;
+}
+
 @media screen and (max-width: 890px) {
   .movie-page h1 {
     font-size: 32px;
@@ -1369,7 +1360,7 @@ footer.visible {
   }
 
   .movie-page .review-section {
-    margin-top: 8rem;
+    margin-top: 6rem;
   }
   .movie-page .article-content {
     width: auto;
@@ -1433,21 +1424,6 @@ footer.visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.comments-container {
-  width: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.comment-form {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  width: 700px;
-  margin: 1.5rem 0 1.5rem 0;
 }
 
 .comment-input {
