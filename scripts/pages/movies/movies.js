@@ -39,11 +39,6 @@ if (sort) {
     movies.sort((a, b) => b.totalReviews - a.totalReviews);
   }
 
-  // movies.forEach((movie, index) => {
-  //   const movieCard = MovieCard(movie);
-  //   movieCard.style.animationDelay = `${index * 100}ms`;
-  //   sorted.appendChild(movieCard);
-  // });
   appendMovies(movies, sorted);
 }
 
@@ -75,7 +70,7 @@ page.addEventListener("click", (e) => {
   if (card) {
     const movieId = parseInt(card.id, 10);
     if (movieId) {
-      window.location.assign(`movie.html?id=${movieId}`);
+      window.location.assign(`pages/movies/movie.html?id=${movieId}`);
     }
   }
 

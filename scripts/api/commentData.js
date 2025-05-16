@@ -4,7 +4,7 @@ export async function getComments() {
     return JSON.parse(cachedComments);
   }
 
-  const commentData = await fetch("/data/comments.json")
+  const commentData = await fetch("data/comments.json")
     .then((res) => res.json())
     .then((data) => data)
     .catch((err) => {

@@ -4,7 +4,7 @@ export async function getReviews() {
     return JSON.parse(cachedReviews);
   }
 
-  const reviewData = await fetch("/data/reviews.json")
+  const reviewData = await fetch("data/reviews.json")
     .then((res) => res.json())
     .then((data) => data)
     .catch((err) => {

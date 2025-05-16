@@ -20,7 +20,7 @@ async function fetchMovies() {
     );
     const data = await res.json();
 
-    const reviews = await fetch("/data/reviews.json")
+    const reviews = await fetch("data/reviews.json")
       .then((res) => res.json())
       .then((data) => data)
       .catch((err) => null);

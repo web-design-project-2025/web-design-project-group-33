@@ -1,6 +1,6 @@
 import { userId } from "../../main.js";
 
-const user = await fetch("/data/users.json")
+const user = await fetch("data/users.json")
   .then((res) => res.json())
   .then((data) => {
     return data.find((user) => user.id === userId);
