@@ -878,10 +878,15 @@ footer.visible {
   background-color: transparent;
   cursor: pointer;
   color: var(--white);
-
   display: flex;
   flex-direction: row;
   gap: 3px;
+  padding: 7px;
+  border-radius: 50%;
+}
+
+.comment-mini-button:hover {
+  background-color: #383838;
 }
 
 .review-content {
