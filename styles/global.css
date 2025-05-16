@@ -886,8 +886,8 @@ footer.visible {
 .review-content {
   display: flex;
   flex-direction: column;
-  width: 100%;
   max-width: 34rem;
+  width: 100%;
 }
 
 .review-content p {
@@ -987,7 +987,6 @@ footer.visible {
 .review-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .sort-button {
