@@ -773,6 +773,7 @@ footer.visible {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 155px;
   cursor: pointer;
   opacity: 0;
   transform: translateY(20px);
@@ -1047,7 +1048,7 @@ footer.visible {
 }
 
 .movies-container {
-  margin-top: 2rem;
+  margin-top: 0;
   margin-left: 30px;
   margin-right: 30px;
   display: flex;
@@ -1056,6 +1057,8 @@ footer.visible {
   justify-content: center;
   gap: 1rem;
   overflow: hidden;
+
+  max-width: calc(3 * 155px + 2 * 1rem);
 }
 
 .movies-section {
@@ -1074,7 +1077,7 @@ footer.visible {
   display: none;
 }
 .movies-section#sorted.shown {
-  display: block;
+  display: flex;
 }
 
 .section-header {
@@ -1139,16 +1142,17 @@ footer.visible {
   }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 1215px) {
   .movies-container {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    margin-top: 1rem;
+    max-width: calc(6 * 155px + 5 * 1rem);
   }
 }
 
 .movies-container#sorted {
   flex-wrap: wrap;
   justify-content: center;
+  max-width: calc(6 * 155px + 5 * 1rem);
 }
 
 /* Movie page */

@@ -59,17 +59,6 @@ for (let i = 0; i < movies.length; i++) {
   }
 }
 
-// trendingMovies.forEach((movie, index) => {
-//   const movieCard = MovieCard(movie);
-//   movieCard.style.animationDelay = `${index * 100}ms`;
-//   trending.appendChild(movieCard);
-// });
-
-// topMovies.forEach((movie, index) => {
-//   const movieCard = MovieCard(movie);
-//   movieCard.style.animationDelay = `${index * 100}ms`;
-//   top.appendChild(movieCard);
-// });
 appendMovies(trendingMovies, trending);
 appendMovies(topMovies, top);
 
