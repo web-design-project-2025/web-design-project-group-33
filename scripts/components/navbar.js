@@ -1,4 +1,5 @@
 import { getMovies } from "../api/movieData.js";
+import { userId } from "../main.js";
 
 /* Use these in the HTML
 <script type="module" src="/scripts/main.js"></script>
@@ -61,6 +62,14 @@ export async function NavbarComponent() {
       </div>
     </div>
     `;
+
+  const user = await fetch("/data/users.json")
+    .then((res) => res.json())
+    .then((data) => {
+      return data.find((user) => user.id === userId);
+    });
+
+  navbarComponent.querySelector(".profile-pic").src = user.image;
 
   const hamburgerBtn = navbarComponent.querySelector("#hamburger-btn");
   const mobileMenu = navbarComponent.querySelector("#mobile-menu");

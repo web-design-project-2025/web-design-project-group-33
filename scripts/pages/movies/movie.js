@@ -2,7 +2,7 @@ import { ReviewComponent as Review } from "../../components/reviewComponent.js";
 import { ReviewTextBox as ReviewForm } from "../../components/reviewTextBox.js";
 import { getMovies } from "../../api/movieData.js";
 import { getReviews, postReview } from "../../api/reviewData.js";
-import { showToast } from "../../main.js";
+import { showToast, userId } from "../../main.js";
 
 const reviewContainer = document.getElementById("reviews");
 
@@ -74,11 +74,10 @@ reviewForm.addEventListener("submit", (e) => {
   }
   if (rating.value !== "" && content.value !== "") {
     console.log("reviewposted");
-    const user_id = 1;
     const id = reviewData[reviewData.length - 1].id + 1; //bad fix deluxe but we not using uuid soooo...
     postReview({
       id,
-      user_id,
+      user_id: userId,
       movie_id: movieId,
       rating: rating.value,
       content: content.value,
