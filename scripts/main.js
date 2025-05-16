@@ -1,6 +1,12 @@
 import { NavbarComponent } from "/scripts/components/navbar.js";
 import { FooterComponent } from "/scripts/components/footer.js";
 
+if (!localStorage.getItem("current_user")) {
+  localStorage.setItem("current_user", JSON.stringify(10));
+}
+
+export const userId = JSON.parse(localStorage.getItem("current_user"));
+
 const navbarElement = await NavbarComponent();
 document.getElementById("navbar-component").appendChild(navbarElement);
 
