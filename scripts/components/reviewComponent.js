@@ -37,7 +37,7 @@ export async function ReviewComponent(review, movie) {
                 <img src="../../assets/icons/heart.svg" alt="Like Button" />
               </button>
               <button class="comment-mini-button" onclick="window.location.assign('/pages/reviews/review.html?id=${review.id}')">
-                <img src="/assets/icons/comment.svg" alt="Comment Button" />
+                <img src="../../assets/icons/comment.svg" alt="Comment Button" />
               </button>
               <div class="rating">
                 <label for="Rating">Rating:</label>
