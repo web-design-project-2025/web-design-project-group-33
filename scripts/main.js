@@ -1,5 +1,5 @@
-import { NavbarComponent } from "/scripts/components/navbar.js";
-import { FooterComponent } from "/scripts/components/footer.js";
+import { NavbarComponent } from "./components/navbar.js";
+import { FooterComponent } from "./components/footer.js";
 
 if (!localStorage.getItem("current_user")) {
   localStorage.setItem("current_user", JSON.stringify(10));
@@ -21,14 +21,16 @@ const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".homepage-cover-photo");
 let current = 0;
 
-setInterval(() => {
-  current = (current + 1) % slides.length;
-  const slide = slides[current];
-  slider.scrollTo({
-    left: slide.offsetLeft,
-    behavior: "smooth",
-  });
-}, 6000);
+if (slider) {
+  setInterval(() => {
+    current = (current + 1) % slides.length;
+    const slide = slides[current];
+    slider.scrollTo({
+      left: slide.offsetLeft,
+      behavior: "smooth",
+    });
+  }, 6000);
+}
 
 const toast = document.createElement("div");
 toast.classList.add("toast");
@@ -49,7 +51,7 @@ export function showToast(message, type) {
 const backgroundWrapper = document.createElement("div");
 backgroundWrapper.className = "background-wrapper";
 const backgroundGraphic = document.createElement("img");
-backgroundGraphic.src = "/assets/icons/side-element.svg";
+backgroundGraphic.src = "assets/icons/side-element.svg";
 backgroundGraphic.className = "background-graphic";
 backgroundWrapper.appendChild(backgroundGraphic);
 

@@ -25,7 +25,7 @@ const releaseDate = document.createElement("span");
 releaseDate.innerHTML = movie.releaseDate.match(/^\d{4}/)[0];
 title.appendChild(releaseDate);
 
-const cast = await fetch("/data/cast.json")
+const cast = await fetch("data/cast.json")
   .then((res) => res.json())
   .then((data) => data);
 

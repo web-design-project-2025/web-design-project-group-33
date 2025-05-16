@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <base href="/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies</title>
     <link rel="stylesheet" href="https://use.typekit.net/kxb7wrw.css" />
-    <link rel="stylesheet" href="../../styles/global.css" />
-    <script type="module" src="../../scripts/main.js"></script>
+    <link rel="stylesheet" href="styles/global.css" />
+    <script type="module" src="scripts/main.js"></script>
     <link
       rel="icon"
-      href="../../assets/icons/movie-roast-small.svg"
+      href="assets/icons/movie-roast-small.svg"
       type="image/svg+xml"
     />
   </head>
-  <script type="module" src="../../scripts/pages/movies/movies.js"></script>
+  <script type="module" src="scripts/pages/movies/movies.js"></script>
   <nav id="navbar-component"></nav>
   <body>
     <main class="page-content">
       <section id="movies-trending" class="movies-section">
         <div class="section-header">
           <h2 class="section-title">Trending</h2>
-          <a href="./movies.html?sort=trending" id="trending" class="view-more"
+          <a href="movies.html?sort=trending" id="trending" class="view-more"
             >View more...</a
           >
         </div>
@@ -29,7 +30,7 @@
       <section id="movies-roasted" class="movies-section">
         <div class="section-header">
           <h2 class="section-title">Most Roasted</h2>
-          <a href="./movies.html?sort=top" id="top" class="view-more"
+          <a href="movies.html?sort=top" id="top" class="view-more"
             >View more...</a
           >
         </div>

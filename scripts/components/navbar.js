@@ -11,17 +11,17 @@ export async function NavbarComponent() {
   navbarComponent.className = "different-navbar-components";
   navbarComponent.innerHTML = `  
    <nav class="navbar">
-      <a href="../../index.html">
+      <a href="index.html">
         <img
-          src="../../assets/icons/movie-roast-darkbg.svg"
+          src="assets/icons/movie-roast-darkbg.svg"
           alt="Movie Roast"
           class="logo"
         />
       </a>
       <div class="nav-links">
-        <a href="../../pages/reviews/reviews.html?sort=trending">Reviews</a>
-        <a href="../../pages/movies/movies.html">Movies</a>
-        <a href="../../pages/blog/blog.html">Blog</a>
+        <a href="pages/reviews/reviews.html?sort=trending">Reviews</a>
+        <a href="pages/movies/movies.html">Movies</a>
+        <a href="pages/blog/blog.html">Blog</a>
         <form class="searchbar-wrapper">
           <input id="searchbar" class="searchbar" type="text" placeholder="Search..." value="" />
           <div class="search-menu">
@@ -29,9 +29,9 @@ export async function NavbarComponent() {
           </div>
         </form>
       </div>
-      <a id="profile-icon" href="/pages/profile/profile.html">
+      <a id="profile-icon" href="pages/profile/profile.html">
         <img
-          src="../../assets/pictures/profil.jpg"
+          src="assets/pictures/profil.jpg"
           alt="Profile Picture"
           class="profile-pic"
         />
@@ -39,10 +39,10 @@ export async function NavbarComponent() {
     </nav>
     <nav class="mobile-bottom-navbar">
       <button class="hamburger" id="hamburger-btn">☰</button>
-      <img src="../../assets/icons/search.svg" alt="" class="search" id="search-button"/>
-      <a id="profile-icon" href="/pages/profile/profile.html">
+      <img src="assets/icons/search.svg" alt="" class="search" id="search-button"/>
+      <a id="profile-icon" href="pages/profile/profile.html">
         <img
-          src="../../assets/pictures/profil.jpg"
+          src="assets/pictures/profil.jpg"
           alt="Profile Picture"
           class="profile-pic"
         />
@@ -50,20 +50,20 @@ export async function NavbarComponent() {
     </nav>
     <div id="mobile-menu" class="mobile-menu">
       <img
-        src="../../assets/icons/movie-roast-small.svg"
+        src="assets/icons/movie-roast-small.svg"
         alt="logo hamburger"
         class="logo-burger"
       />
       <div class="links">
-        <a href="../../pages/reviews/reviews.html">Reviews</a>
-        <a href="../../pages/movies/movies.html">Movies</a>
-        <a href="../../pages/blog/blog.html">Blog</a>
-        <a href="../../pages/profile/profile.html">Profile</a>
+        <a href="pages/reviews/reviews.html">Reviews</a>
+        <a href="pages/movies/movies.html">Movies</a>
+        <a href="pages/blog/blog.html">Blog</a>
+        <a href="pages/profile/profile.html">Profile</a>
       </div>
     </div>
     `;
 
-  const user = await fetch("/data/users.json")
+  const user = await fetch("data/users.json")
     .then((res) => res.json())
     .then((data) => {
       return data.find((user) => user.id === userId);
@@ -87,7 +87,7 @@ export async function NavbarComponent() {
   navbarComponent.addEventListener("click", (e) => {
     const movie = e.target.closest(".search-menu ul#movies li");
     if (movie) {
-      window.location.assign(`/pages/movies/movie.html?id=${movie.id}`);
+      window.location.assign(`pages/movies/movie.html?id=${movie.id}`);
     }
   });
 
