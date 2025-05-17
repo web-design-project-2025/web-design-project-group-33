@@ -15,12 +15,12 @@ console.log(urlParams);
 if (window.location.pathname.includes("/pages/reviews/reviews.html")) {
   if (!sort) {
     window.location.assign("pages/reviews/reviews.html?sort=trending");
-    title.textContent = "Trending Reviews";
+    title.textContent = "Trending";
   }
   if (sort === "newest") {
     // temporary
     reviews.sort((a, b) => a.likes - b.likes);
-    title.textContent = "Newest Reviews";
+    title.textContent = "Newest";
   }
   if (sort === "trending") {
     reviews.sort((a, b) => b.rating - a.rating);
@@ -28,7 +28,7 @@ if (window.location.pathname.includes("/pages/reviews/reviews.html")) {
   }
   if (sort === "top") {
     reviews.sort((a, b) => b.likes - a.likes);
-    title.textContent = "Top Reviews";
+    title.textContent = "Most Liked";
   }
 } else {
   const button = document.querySelector(".sort-button");
