@@ -76,8 +76,7 @@ page.addEventListener("click", (e) => {
 
   if (e.target.className === "view-more") {
     e.preventDefault();
-    console.log(e.target);
-    window.location.assign(`movies.html?sort=${e.target.id}`);
+    window.location.assign(`pages/movies/movies.html?sort=${e.target.id}`);
   }
 });
 
@@ -90,7 +89,7 @@ sortButton.addEventListener("click", () => {
 
 sortMenu.addEventListener("click", (e) => {
   if (e.target.id) {
-    window.location.assign(`movies.html?sort=${e.target.id}`);
+    window.location.assign(`pages/movies/movies.html?sort=${e.target.id}`);
   }
 });
 
