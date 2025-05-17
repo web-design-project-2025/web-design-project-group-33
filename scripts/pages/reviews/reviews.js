@@ -14,7 +14,7 @@ const sort = urlParams.get("sort");
 console.log(urlParams);
 if (window.location.pathname.includes("/pages/reviews/reviews.html")) {
   if (!sort) {
-    window.location.assign("reviews.html?sort=trending");
+    window.location.assign("pages/reviews/reviews.html?sort=trending");
     title.textContent = "Trending Reviews";
   }
   if (sort === "newest") {
@@ -56,7 +56,7 @@ sortButton.addEventListener("click", () => {
 sortMenu.addEventListener("click", (e) => {
   console.log(e);
   if (e.target.id) {
-    window.location.assign(`reviews.html?sort=${e.target.id}`);
+    window.location.assign(`pages/reviews/reviews.html?sort=${e.target.id}`);
   }
 });
 
