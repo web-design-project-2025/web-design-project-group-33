@@ -2,6 +2,8 @@
 
 Movie Roast is a fun web app where users can roast their favorite bad movies. Built with HTML, CSS and JavaScript.
 
+https://web-design-project-2025.github.io/web-design-project-group-33/index.html
+
 ## Features
 
 - Browse, search and filter through movies and reviews.
